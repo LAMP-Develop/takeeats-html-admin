@@ -1,0 +1,23 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.06em;
+}
+
+#header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  width: 260px;
+  height: 100%;
+}
+
+#main {
+  z-index: 1;
+  position: relative;
+  padding-left: 260px;
+  background-color: $light;
+  min-height: 100vh;
+}

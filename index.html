@@ -7,5 +7,107 @@
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header id="header" class="header">
+      <div class="header-logo">
+        <a href="/">
+          <img src="./dist/images/logo.png" alt="" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="active">
+            <a href="">
+              <i class="fas fa-home"></i>
+              トップ
+            </a>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="fas fa-list-ul"></i>
+              商品
+            </span>
+            <ul>
+              <li>
+                <a href="">商品一覧</a>
+              </li>
+              <li>
+                <a href="">商品の新規追加</a>
+              </li>
+              <li>
+                <a href="">商品カテゴリ</a>
+              </li>
+              <li>
+                <a href="">商品オプション</a>
+              </li>
+            </ul>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="far fa-bell"></i>
+              お知らせ
+            </span>
+            <ul>
+              <li>
+                <a href="">お知らせ一覧</a>
+              </li>
+              <li>
+                <a href="">お知らせの新規追加</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">
+              <i class="far fa-clock"></i>
+              受注管理
+            </a>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="fas fa-cog"></i>
+              設定
+            </span>
+            <ul>
+              <li>
+                <a href="">店舗情報の編集</a>
+              </li>
+              <li>
+                <a href="">ページテキストの変更</a>
+              </li>
+            </ul>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="far fa-heart"></i>
+              サポート
+            </span>
+            <ul>
+              <li>
+                <a href="">店舗情報の編集</a>
+              </li>
+              <li>
+                <a href="">ページテキストの変更</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- #header -->
+    <main id="main" class="page">
+      <h2 class="page-ttl p-md-4 p-3">トップ</h2>
+      <div id="page-content" class="p-md-4 p-3">
+        <div class="page-card">
+          <a class="news" href="">
+            <time data-time="">2020.01.01</time>
+            <span>タイトル</span>
+          </a>
+        </div>
+      </div>
+      <!-- #page-content -->
+    </main>
+    <!-- #main -->
+    <footer id="footer"></footer>
+    <!-- #footer -->
+  </body>
 </html>
