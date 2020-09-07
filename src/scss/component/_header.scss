@@ -22,7 +22,8 @@
         list-style: none;
         text-align: center;
         line-height: 1;
-        div,a {
+        div,
+        a {
           cursor: pointer;
           display: block;
           color: #909090;
@@ -114,7 +115,6 @@
         overflow: hidden;
         position: relative;
         list-style: none;
-        padding: 0.5rem 1.5rem;
         i {
           color: $secondary;
           margin-right: 0.5rem;
@@ -124,12 +124,12 @@
           display: block;
           cursor: pointer;
           color: $body-color;
+          padding: 0.5rem 1.5rem;
           &:hover {
             text-decoration: none;
           }
         }
         &.active {
-          background-color: $warning;
           &::after {
             border-right: 17px solid $light;
             border-top: 20px solid transparent;
@@ -140,7 +140,9 @@
             right: 0;
             top: 0;
           }
-          a {
+          & > a,
+          & > span {
+            background-color: $warning !important;
             color: $white;
             i {
               color: $white;
@@ -161,7 +163,7 @@
                 display: block;
                 font-size: $font-size-sm;
                 color: $secondary;
-                padding: 0.3rem;
+                padding: 0.5rem 1rem;
                 &::before {
                   content: "-";
                   margin-right: 5px;

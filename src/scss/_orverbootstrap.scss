@@ -1,7 +1,22 @@
 .table {
   th,
   td {
+    font-size: $font-size-sm;
     border-bottom: 1px solid #dee2e6;
     border-top: 0;
+  }
+}
+
+.btn {
+  &-default {
+    background-color: $white;
+  }
+  &-group {
+    .btn {
+      padding: 1em 1em * 1.5;
+      font-size: $font-size-sm;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
   }
 }
