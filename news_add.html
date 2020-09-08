@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お知らせ新規追加 | TakeEats</title>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="./dist/js/bundle.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header-logo">
+        <a href="/">
+          <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="">
+            <a href="./index.html">
+              <i class="fas fa-home"></i>
+              トップ
+            </a>
+          </li>
+          <li class="parent active">
+            <span>
+              <i class="fas fa-list-ul"></i>
+              商品
+            </span>
+            <ul>
+              <li>
+                <a href="">商品一覧</a>
+              </li>
+              <li>
+                <a href="">商品の新規追加</a>
+              </li>
+              <li>
+                <a href="">商品カテゴリ</a>
+              </li>
+              <li>
+                <a href="">商品オプション</a>
+              </li>
+            </ul>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="far fa-bell"></i>
+              お知らせ
+            </span>
+            <ul>
+              <li>
+                <a href="">お知らせ一覧</a>
+              </li>
+              <li>
+                <a href="">お知らせの新規追加</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">
+              <i class="far fa-clock"></i>
+              受注管理
+            </a>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="fas fa-cog"></i>
+              設定
+            </span>
+            <ul>
+              <li>
+                <a href="">店舗情報の編集</a>
+              </li>
+              <li>
+                <a href="">ページテキストの変更</a>
+              </li>
+            </ul>
+          </li>
+          <li class="parent">
+            <span>
+              <i class="far fa-heart"></i>
+              サポート
+            </span>
+            <ul>
+              <li>
+                <a href="">店舗情報の編集</a>
+              </li>
+              <li>
+                <a href="">ページテキストの変更</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header-spnav">
+        <ul>
+          <li class="active">
+            <a href="">
+              <i class="fas fa-home"></i>
+              <span>トップ</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fas fa-list-ul"></i>
+              <span>商品一覧</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="far fa-bell"></i>
+              <span>お知らせ</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="far fa-clock"></i>
+              <span>受注管理</span>
+            </a>
+          </li>
+          <li>
+            <div id="spmenuopen">
+              <i class="fas fa-ellipsis-v"></i>
+              <span>その他</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <aside id="spmenu" class="header-spmenu">
+        <div class="header-spmenu__site">
+          <span class="header-spmenu__site-name">TakeCafe</span>
+          <a class="header-spmenu__site-btn btn btn-warning btn-block text-white p-3">
+            <small>
+              サイトを見る
+              <i class="far fa-window-restore ml-1"></i>
+            </small>
+          </a>
+        </div>
+        <ul>
+          <li class="cats">
+            <i class="fas fa-cog mr-2"></i>
+            <span>設定</span>
+          </li>
+          <li><a href="">店舗情報の編集</a></li>
+          <li><a href="">ページテキストの変更</a></li>
+          <li><a href="">追加オプションの管理</a></li>
+          <li><a href="">振込口座の設定</a></li>
+          <li class="cats">
+            <i class="far fa-heart mr-2"></i>
+            <span>サポート</span>
+          </li>
+          <li><a href="">販促物・梱包資材の発注</a></li>
+          <li><a href="">ご意見・ご要望</a></li>
+          <li>
+            <a href="">
+              運用ガイド
+              <i class="far fa-window-restore ml-1"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              お問い合わせ
+              <i class="far fa-window-restore ml-1"></i>
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </header>
+    <!-- #header -->
+    <main id="main" class="page">
+      <h2 class="page-ttl p-md-4 p-3">お知らせ新規追加</h2>
+      <div id="catalog-btn" class="px-3 py-2 bg-dark">
+        <a href="" class="text-body d-block">
+          <i class="fas fa-angle-left mr-1"></i>
+          <span>一覧に戻る</span>
+        </a>
+      </div>
+      <div id="page-content" class="p-md-4 p-3">
+        <form action="">
+          <div class="form-group">
+            <label class="d-block" for="news-title">タイトル</label>
+            <input type="text" class="form-control" id="news-title" name="" value="" />
+          </div>
+          <div class="form-group">
+            <label class="d-block">画像</label>
+            <div class="form-imgfile">
+              <label for="news-img">
+                <input type="file" id="news-img" name="" value="" accept="image/*" />
+              </label>
+              <div id="img-preview"></div>
+            </div>
+            <small class="form-text text-muted">
+              ※幅1204pxの画像を推奨しています。
+              <br />
+              ※対応ファイル：jpg.png.gif
+              <br />
+              ※最大ファイルサイズ：1MB
+            </small>
+          </div>
+          <div class="form-group">
+            <label class="d-block" for="news-content">本文</label>
+            <textarea name="" class="form-control" id="news-content" cols="30" rows="10"></textarea>
+          </div>
+          <div class="mt-4">
+            <button type="submit" class="btn btn-info">確認する</button>
+          </div>
+        </form>
+        <script>
+          const sizeLimit = 1024 * 1024 * 1;
+          const fileInput = document.getElementById("news-img");
+
+          // input change
+          const handleFileSelect = () => {
+            const files = fileInput.files;
+            for (let i = 0; i < files.length; i++) {
+              if (files[i].size > sizeLimit) {
+                alert("ファイルサイズは1MB以下にしてください");
+                fileInput.value = "";
+                return;
+              } else {
+                previewFile(files[i]);
+              }
+            }
+          };
+          fileInput.addEventListener("change", handleFileSelect);
+
+          // img preview
+          function previewFile(file) {
+            const preview = document.getElementById("img-preview");
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const imageUrl = e.target.result;
+              const img = document.createElement("img");
+              img.src = imageUrl;
+              preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          }
+        </script>
+      </div>
+      <!-- #page-content -->
+    </main>
+    <!-- #main -->
+    <footer id="footer">
+      <p class="footer-copy">
+        ©2020
+        <a class="" href="https://system.take-eats.jp" target="_blank">TakeEats</a>
+      </p>
+    </footer>
+    <!-- #footer -->
+    <div class="orverlay"></div>
+  </body>
+</html>

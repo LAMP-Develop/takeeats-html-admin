@@ -1,0 +1,36 @@
+.form {
+  &-group {
+    margin-bottom: 1.5rem;
+  }
+  &-imgfile {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    label {
+      z-index: 1;
+      cursor: pointer;
+      width: 166px;
+      height: 117px;
+      background-image: url("../images/bg_input_file.png");
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0;
+      @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: url("../images/bg_input_file@2x.png");
+      }
+      input {
+        display: none;
+      }
+    }
+    #img-preview {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
