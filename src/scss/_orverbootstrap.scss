@@ -8,6 +8,8 @@
 }
 
 .btn {
+  font-size: $font-size-sm;
+  padding: 0.5em 2em;
   &-default {
     background-color: $white;
   }
@@ -17,6 +19,20 @@
       font-size: $font-size-sm;
       border-radius: 0.5rem;
       font-weight: bold;
+    }
+  }
+}
+
+.input-group,
+.form-control {
+  max-width: 480px;
+}
+
+.custom-file {
+  max-width: 480px;
+  &-label {
+    &::after {
+      content: "選択";
     }
   }
 }

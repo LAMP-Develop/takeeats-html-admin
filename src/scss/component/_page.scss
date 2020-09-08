@@ -5,6 +5,9 @@
     color: #66615b;
     border-bottom: 1px solid #dddddd;
     margin: 0;
+    @include media-breakpoint-down(md) {
+      font-size: 1.25rem;
+    }
   }
   // カードコンポーネント
   &-card {
