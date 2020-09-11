@@ -10,7 +10,7 @@
   <body>
     <header id="header" class="header">
       <div class="header-logo">
-        <a href="/">
+        <a href="./index.html">
           <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
         </a>
       </div>
@@ -32,13 +32,13 @@
                 <a href="./catalog.html">商品一覧</a>
               </li>
               <li>
-                <a href="">商品の新規追加</a>
+                <a href="./catalog_add.html">商品の新規追加</a>
               </li>
               <li>
-                <a href="">商品カテゴリ</a>
+                <a href="./catalog_category.html">商品カテゴリ</a>
               </li>
               <li>
-                <a href="">商品オプション</a>
+                <a href="./catalog_options.html">商品オプション</a>
               </li>
             </ul>
           </li>
@@ -49,15 +49,15 @@
             </span>
             <ul>
               <li>
-                <a href="">お知らせ一覧</a>
+                <a href="./news_list.html">お知らせ一覧</a>
               </li>
               <li>
-                <a href="">お知らせの新規追加</a>
+                <a href="./news_add.html">お知らせの新規追加</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="./order_list.html">
               <i class="far fa-clock"></i>
               受注管理
             </a>
@@ -69,7 +69,7 @@
             </span>
             <ul>
               <li>
-                <a href="">店舗情報の編集</a>
+                <a href="./shop_list.html">店舗情報の編集</a>
               </li>
               <li>
                 <a href="">ページテキストの変更</a>
@@ -83,10 +83,16 @@
             </span>
             <ul>
               <li>
-                <a href="">店舗情報の編集</a>
+                <a href="">販促物・梱包資材の発注</a>
               </li>
               <li>
-                <a href="">ページテキストの変更</a>
+                <a href="">ご意見・ご要望</a>
+              </li>
+              <li>
+                <a href="https://system.take-eats.jp/column/" target="_blank">
+                  お役立ちガイド
+                  <i class="far fa-window-restore ml-1"></i>
+                </a>
               </li>
             </ul>
           </li>
@@ -95,7 +101,7 @@
       <nav class="header-spnav">
         <ul>
           <li class="active">
-            <a href="">
+            <a href="./index.html">
               <i class="fas fa-home"></i>
               <span>トップ</span>
             </a>
@@ -107,13 +113,13 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="./news_list.html">
               <i class="far fa-bell"></i>
               <span>お知らせ</span>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="./order_list.html">
               <i class="far fa-clock"></i>
               <span>受注管理</span>
             </a>
@@ -141,7 +147,7 @@
             <i class="fas fa-cog mr-2"></i>
             <span>設定</span>
           </li>
-          <li><a href="">店舗情報の編集</a></li>
+          <li><a href="./shop_list.html">店舗情報の編集</a></li>
           <li><a href="">ページテキストの変更</a></li>
           <li><a href="">追加オプションの管理</a></li>
           <li><a href="">振込口座の設定</a></li>
@@ -152,14 +158,8 @@
           <li><a href="">販促物・梱包資材の発注</a></li>
           <li><a href="">ご意見・ご要望</a></li>
           <li>
-            <a href="">
-              運用ガイド
-              <i class="far fa-window-restore ml-1"></i>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              お問い合わせ
+            <a href="https://system.take-eats.jp/column/" target="_blank">
+              お役立ちガイド
               <i class="far fa-window-restore ml-1"></i>
             </a>
           </li>
@@ -172,9 +172,9 @@
       <div id="page-content" class="p-md-4 p-3">
         <div class="mb-5">
           <div class="page-card">
-            <a class="news" href="">
-              <time data-time="">2020.01.01</time>
-              <span>タイトル</span>
+            <a class="news" href="./">
+              <time data-time="">2020.09.01</time>
+              <span>システムアップデートのお知らせ</span>
             </a>
           </div>
         </div>
@@ -185,26 +185,80 @@
               <table class="table table-sm table-hover m-0">
                 <thead>
                   <tr>
-                    <th class="text-nowrap">#</th>
-                    <th class="text-nowrap">First</th>
-                    <th class="text-nowrap">Last</th>
-                    <th class="text-nowrap">Handle</th>
-                    <th class="text-nowrap">#</th>
-                    <th class="text-nowrap">First</th>
-                    <th class="text-nowrap">Last</th>
-                    <th class="text-nowrap">Handle</th>
+                    <th class="text-nowrap">注文番号</th>
+                    <th class="text-nowrap">注文日時</th>
+                    <th class="text-nowrap">お客様名</th>
+                    <th class="text-nowrap">ヨミガナ</th>
+                    <th class="text-nowrap">電話番号</th>
+                    <th class="text-nowrap">メールアドレス</th>
+                    <th class="text-nowrap">決済方法</th>
+                    <th class="text-nowrap">受け取り店舗</th>
+                    <th class="text-nowrap">受け取り日時</th>
+                    <th class="text-nowrap">小計</th>
+                    <th class="text-nowrap">消費税額</th>
+                    <th class="text-nowrap">送料</th>
+                    <th class="text-nowrap">お気持ちオプション</th>
+                    <th class="text-nowrap">合計金額</th>
+                    <th class="text-nowrap">注文内容</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
-                    <td class="text-nowrap">10001</td>
+                    <td class="text-nowrap">20200901000000</td>
+                    <td class="text-nowrap">2020/09/01 00:00:00</td>
+                    <td class="text-nowrap">山田 太郎</td>
+                    <td class="text-nowrap">ﾔﾏﾀﾞ ﾀﾛｳ</td>
+                    <td class="text-nowrap">000-1234-5678</td>
+                    <td class="text-nowrap"><a href="mailto:info@example.com">info@example.com</a></td>
+                    <td class="text-nowrap">クレジットカード決済</td>
+                    <td class="text-nowrap">本店</td>
+                    <td class="text-nowrap">2020-09-02 12:30頃</td>
+                    <td class="text-nowrap">980円</td>
+                    <td class="text-nowrap">78円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">1,058円</td>
+                    <td class="text-nowrap">
+                      <small class="text-body">トマトとエビのパスタ × 1</small>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap">20200901000000</td>
+                    <td class="text-nowrap">2020/09/01 00:00:00</td>
+                    <td class="text-nowrap">山田 太郎</td>
+                    <td class="text-nowrap">ﾔﾏﾀﾞ ﾀﾛｳ</td>
+                    <td class="text-nowrap">000-1234-5678</td>
+                    <td class="text-nowrap"><a href="mailto:info@example.com">info@example.com</a></td>
+                    <td class="text-nowrap">クレジットカード決済</td>
+                    <td class="text-nowrap">本店</td>
+                    <td class="text-nowrap">2020-09-02 12:30頃</td>
+                    <td class="text-nowrap">980円</td>
+                    <td class="text-nowrap">78円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">1,058円</td>
+                    <td class="text-nowrap">
+                      <small class="text-body">トマトとエビのパスタ × 1</small>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap">20200901000000</td>
+                    <td class="text-nowrap">2020/09/01 00:00:00</td>
+                    <td class="text-nowrap">山田 太郎</td>
+                    <td class="text-nowrap">ﾔﾏﾀﾞ ﾀﾛｳ</td>
+                    <td class="text-nowrap">000-1234-5678</td>
+                    <td class="text-nowrap"><a href="mailto:info@example.com">info@example.com</a></td>
+                    <td class="text-nowrap">クレジットカード決済</td>
+                    <td class="text-nowrap">本店</td>
+                    <td class="text-nowrap">2020-09-02 12:30頃</td>
+                    <td class="text-nowrap">980円</td>
+                    <td class="text-nowrap">78円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">0円</td>
+                    <td class="text-nowrap">1,058円</td>
+                    <td class="text-nowrap">
+                      <small class="text-body">トマトとエビのパスタ × 1</small>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -214,17 +268,13 @@
         <div class="mb-0">
           <h3>追加中サービスオプション</h3>
           <div class="d-flex flex-wrap">
-            <div class="page-card mr-3 mb-3">
+            <div class="page-card mr-md-3 mb-3">
               <h4>FAX転送</h4>
               <p class="mb-0 text-muted small">お客様から注文があった際に受注内容をFAXへ転送することができます。</p>
             </div>
-            <div class="page-card mr-3 mb-3">
-              <h4>FAX転送</h4>
-              <p class="mb-0 text-muted small">お客様から注文があった際に受注内容をFAXへ転送することができます。</p>
-            </div>
-            <div class="page-card mr-3 mb-3">
-              <h4>FAX転送</h4>
-              <p class="mb-0 text-muted small">お客様から注文があった際に受注内容をFAXへ転送することができます。</p>
+            <div class="page-card mr-md-3 mb-3">
+              <h4>お気持ちオプション</h4>
+              <p class="mb-0 text-muted small">お客様が商品をご注文時、店舗様に少額の応援金を贈ることができます。</p>
             </div>
           </div>
         </div>
