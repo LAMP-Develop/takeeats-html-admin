@@ -51,6 +51,7 @@
     }
   }
   &.sales {
+    overflow: hidden;
     border-radius: 1rem;
     .content-body {
       background-size: contain;
