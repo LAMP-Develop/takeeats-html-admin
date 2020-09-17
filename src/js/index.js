@@ -3,33 +3,26 @@ import "../scss/app.scss";
 
 // JSインポート
 import "bootstrap";
+import "bootstrap-input-spinner";
+const feather = require("feather-icons");
 
 $(function () {
-  // スムーススクロール
-  $('a[href^="#"]').on("click", function () {
-    let speed = 500;
-    let href = $(this).attr("href");
-    let target = $(href == "#" || href == "" ? "html" : href);
-    let position = target.offset().top;
-    $("html, body").animate({ scrollTop: position }, speed, "swing");
-    return false;
+  // featherIcons
+  feather.replace({
+    width: 18,
   });
 
-  // SPメニュー
-  $("#spmenuopen").on("click", function () {
-    $(this).toggleClass("open");
-    $("body").toggleClass("menuopen");
-    $("#spmenu").toggleClass("open");
-  });
-  $(".orverlay").on("click", function () {
-    $(this).toggleClass("open");
-    $("body").toggleClass("menuopen");
-    $("#spmenu").toggleClass("open");
+  // resize
+  $(window).on("load resize", function () {
+    let nav_h = $("#navbar").outerHeight();
+    // padding調整
+    $("body").css("padding-top", nav_h + "px");
   });
 
-  // メニュートグル
-  $("li.parent").on("click", function () {
-    $(this).children("ul").slideToggle();
-    $(this).toggleClass("toggle-open");
+  // SP Menu
+  $(".navbar-toggle-btn, .orverray").on("click", function () {
+    $("body").toggleClass("open");
+    $("#sidebarMenu").toggleClass("open");
+    $(this).toggleClass("active");
   });
 });

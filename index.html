@@ -10,12 +10,284 @@
     <script src="./dist/js/bundle.js" defer></script>
   </head>
   <body>
-    <header id="header"></header>
-    <!-- #header -->
-    <main id="main"></main>
-    <!-- #main -->
-    <footer id="footer"></footer>
-    <!-- #footer -->
-    <div class="overray"></div>
+    <nav id="navbar" class="navbar bg-primary flex-md-nowrap p-0">
+      <a class="navbar-brand col-md-2 col-6 mr-0 px-3" href="./index.html">
+        <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+      </a>
+    </nav>
+    <div class="navbar-toggle-btn">
+      <i data-feather="menu"></i>
+    </div>
+    <!-- .navbar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-2 d-md-block px-0 bg-white sidebar">
+          <div class="pt-md-5">
+            <div class="head">
+              <p>
+                こんにちは、
+                <span class="d-block">TakeCafe</span>
+              </p>
+              <a href="">ログアウト</a>
+            </div>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="feather-icon"><i data-feather="home"></i></span>
+                  <span>トップ</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="clipboard"></i></span>
+                  <span>注文管理</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="book"></i></span>
+                  <span>商品の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="feather"></i></span>
+                  <span>お知らせの更新</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="bar-chart"></i></span>
+                  <span>データ分析をみる</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="flag"></i></span>
+                  <span>店舗の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="settings"></i></span>
+                  <span>設定</span>
+                </a>
+              </li>
+            </ul>
+            <div class="foot">
+              <a href="">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">ご利用マニュアルのダウンロード</span>
+              </a>
+              <a href="">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- #sidebarMenu -->
+        <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
+          <div class="wrap">
+            <h2 class="page-ttl">トップ</h2>
+            <div class="content">
+              <div class="content-head">
+                <h3>
+                  <i data-feather="info"></i>
+                  <span>TakeEatからのお知らせ</span>
+                </h3>
+              </div>
+              <div class="content-body">
+                <a class="text-body" href="">
+                  <span class="d-block text-dark">2020-06-02</span>
+                  <span class="d-block">管理画面のデザインをアップデートしました。</span>
+                </a>
+              </div>
+            </div>
+            <!-- .content -->
+            <div class="content sales">
+              <div class="content-head">
+                <h3 class="text-center font-weight-bold">
+                  <span>本日の売上</span>
+                </h3>
+              </div>
+              <div class="content-body">
+                <p class="price">
+                  <span class="number">10,0000</span>
+                  <span class="compa">
+                    前日比
+                    <span>19.89%</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <!-- .content -->
+            <div class="content">
+              <div class="content-head">
+                <h3>
+                  <i data-feather="clipboard"></i>
+                  <span>最新注文</span>
+                  <span class="badge badge-pill badge-secondary">5</span>
+                </h3>
+                <a class="link" href="">一覧へ</a>
+              </div>
+              <div class="content-body">
+                <div class="oreder-list">
+                  <div class="oreder-item">
+                    <div class="oreder-item-head">
+                      <span>2020-06-02 12:00</span>
+                      <span>お持ち帰り</span>
+                    </div>
+                    <div class="oreder-item-body">
+                      <p class="name">
+                        <span class="furi">ヤマダ タロウ</span>
+                        <span>山田 太郎</span>
+                      </p>
+                      <table class="table table-sm table-borderless">
+                        <tbody>
+                          <tr>
+                            <th>時間</th>
+                            <td>2020-06-02 12:00</td>
+                          </tr>
+                          <tr>
+                            <th>場所</th>
+                            <td>京都四条本店</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="text-center">
+                        <a class="btn btn-block btn-dark" href="">詳細を見る</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .oreder-item -->
+                  <div class="oreder-item">
+                    <div class="oreder-item-head">
+                      <span>2020-06-02 12:00</span>
+                      <span>お持ち帰り</span>
+                    </div>
+                    <div class="oreder-item-body">
+                      <p class="name">
+                        <span class="furi">ヤマダ タロウ</span>
+                        <span>山田 太郎</span>
+                      </p>
+                      <table class="table table-sm table-borderless">
+                        <tbody>
+                          <tr>
+                            <th>時間</th>
+                            <td>2020-06-02 12:00</td>
+                          </tr>
+                          <tr>
+                            <th>場所</th>
+                            <td>京都四条本店</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="text-center">
+                        <a class="btn btn-block btn-dark" href="">詳細を見る</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .oreder-item -->
+                  <div class="oreder-item">
+                    <div class="oreder-item-head">
+                      <span>2020-06-02 12:00</span>
+                      <span>お持ち帰り</span>
+                    </div>
+                    <div class="oreder-item-body">
+                      <p class="name">
+                        <span class="furi">ヤマダ タロウ</span>
+                        <span>山田 太郎</span>
+                      </p>
+                      <table class="table table-sm table-borderless">
+                        <tbody>
+                          <tr>
+                            <th>時間</th>
+                            <td>2020-06-02 12:00</td>
+                          </tr>
+                          <tr>
+                            <th>場所</th>
+                            <td>京都四条本店</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="text-center">
+                        <a class="btn btn-block btn-dark" href="">詳細を見る</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .oreder-item -->
+                  <div class="oreder-item">
+                    <div class="oreder-item-head">
+                      <span>2020-06-02 12:00</span>
+                      <span>お持ち帰り</span>
+                    </div>
+                    <div class="oreder-item-body">
+                      <p class="name">
+                        <span class="furi">ヤマダ タロウ</span>
+                        <span>山田 太郎</span>
+                      </p>
+                      <table class="table table-sm table-borderless">
+                        <tbody>
+                          <tr>
+                            <th>時間</th>
+                            <td>2020-06-02 12:00</td>
+                          </tr>
+                          <tr>
+                            <th>場所</th>
+                            <td>京都四条本店</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="text-center">
+                        <a class="btn btn-block btn-dark" href="">詳細を見る</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .oreder-item -->
+                  <div class="oreder-item">
+                    <div class="oreder-item-head">
+                      <span>2020-06-02 12:00</span>
+                      <span>お持ち帰り</span>
+                    </div>
+                    <div class="oreder-item-body">
+                      <p class="name">
+                        <span class="furi">ヤマダ タロウ</span>
+                        <span>山田 太郎</span>
+                      </p>
+                      <table class="table table-sm table-borderless">
+                        <tbody>
+                          <tr>
+                            <th>時間</th>
+                            <td>2020-06-02 12:00</td>
+                          </tr>
+                          <tr>
+                            <th>場所</th>
+                            <td>京都四条本店</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="text-center">
+                        <a class="btn btn-block btn-dark" href="">詳細を見る</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .oreder-item -->
+                </div>
+                <!-- .oreder-list -->
+              </div>
+              <!-- .content-body -->
+            </div>
+            <!-- .content -->
+          </div>
+          <!-- .wrap -->
+          <div class="socket">©2020 TakeEats</div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    <div class="orverray"></div>
   </body>
 </html>

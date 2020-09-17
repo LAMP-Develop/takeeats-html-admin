@@ -1,4 +1,5 @@
-@import "./component/header";
-@import "./component/footer";
-@import "./component/page";
-@import "./component/form";
+@import "./component/common";
+@import "./component/layout";
+@import "./component/nav";
+@import "./component/sidemenu";
+@import "./component/content";
