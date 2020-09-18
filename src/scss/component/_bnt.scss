@@ -1,0 +1,10 @@
+.btn {
+  &-light {
+    background-color: $white;
+    border-color: $secondary;
+    &:hover,
+    &:active {
+      background-color: $secondary;
+    }
+  }
+}

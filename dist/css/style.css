@@ -7207,6 +7207,12 @@ img {
   margin: 0 auto;
   padding: 1.5rem 0; }
 
+.btn-light {
+  background-color: #fff;
+  border-color: #e0e0e0; }
+  .btn-light:hover, .btn-light:active {
+    background-color: #e0e0e0; }
+
 .navbar {
   z-index: 10;
   position: fixed;
@@ -7389,6 +7395,25 @@ body.open .navbar-toggle-btn {
   display: block;
   white-space: nowrap;
   padding: 0.5rem 0.5rem 1rem; }
+  .oreder-list.no-scroll {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    white-space: normal;
+    padding: 0; }
+    .oreder-list.no-scroll .oreder-item {
+      display: block;
+      width: 31%;
+      margin-right: 3.5%;
+      margin-bottom: 3.5%; }
+      @media (max-width: 991.98px) {
+        .oreder-list.no-scroll .oreder-item {
+          width: 100%;
+          margin-right: 0 !important; } }
+      .oreder-list.no-scroll .oreder-item:nth-child(3n) {
+        margin-right: 0; }
 
 .oreder-item {
   display: inline-block;
@@ -7396,7 +7421,8 @@ body.open .navbar-toggle-btn {
   margin-right: 1rem;
   width: 370px;
   white-space: normal;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  background-color: #fff; }
   .oreder-item-head {
     display: flex;
     justify-content: space-between;
@@ -7422,6 +7448,9 @@ body.open .navbar-toggle-btn {
       .oreder-item-body .table th {
         font-weight: normal;
         color: #888888; }
+
+.form-control {
+  border: 0; }
 
 
 /*# sourceMappingURL=style.css.map*/
