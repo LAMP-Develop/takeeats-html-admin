@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注文追加 | TakeEats</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="./dist/js/bundle.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar bg-primary flex-md-nowrap p-0">
+      <a class="navbar-brand col-md-2 col-6 mr-md-3 mr-0 px-3" href="./index.html">
+        <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+      </a>
+      <span class="mr-auto text-white d-md-block d-none">こんにちは、TakeCafe</span>
+      <a class="btn btn-light rounded-pill mr-5 px-4 d-md-block d-none" href="https://system.tale-eats.jp/demo-shop/">
+        <span class="d-inline-block align-middle">サイトを確認する</span>
+        <i class="d-inline-block align-middle" data-feather="external-link"></i>
+      </a>
+    </nav>
+    <div class="navbar-toggle-btn">
+      <i data-feather="menu"></i>
+    </div>
+    <!-- .navbar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-2 d-md-block px-0 bg-white sidebar">
+          <div class="pt-md-5">
+            <div class="head">
+              <p>
+                こんにちは、
+                <span class="d-block">TakeCafe</span>
+              </p>
+              <a href="">ログアウト</a>
+            </div>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="feather-icon"><i data-feather="home"></i></span>
+                  <span>トップ</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./orders.html">
+                  <span class="feather-icon"><i data-feather="clipboard"></i></span>
+                  <span>注文管理</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="feather-icon"><i data-feather="book"></i></span>
+                  <span>商品の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./post.html">
+                  <span class="feather-icon"><i data-feather="feather"></i></span>
+                  <span>お知らせの更新</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <span class="feather-icon"><i data-feather="bar-chart"></i></span>
+                  <span>データ分析をみる</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./data.html">
+                  <span class="feather-icon"><i data-feather="flag"></i></span>
+                  <span>店舗の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./setting.html">
+                  <span class="feather-icon"><i data-feather="settings"></i></span>
+                  <span>設定</span>
+                </a>
+              </li>
+            </ul>
+            <div class="foot">
+              <a href="">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">ご利用マニュアルのダウンロード</span>
+              </a>
+              <a href="./contact.html">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- #sidebarMenu -->
+        <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
+          <div class="wrap">
+            <h2 class="page-ttl">注文追加</h2>
+            <form class="border-top py-3">
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  お客様氏名
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <input type="text" placeholder="山田 太郎" class="form-control" id="" required />
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  フリガナ
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <input type="text" placeholder="ヤマダ タロウ" class="form-control" id="" required />
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  受け取り方法
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <select class="form-control" id="" required>
+                  <option selected>テイクアウト</option>
+                  <option>デリバリー</option>
+                  <option>お取り寄せ</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  受け取り時間
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <input type="date" class="form-control d-inline-block align-middle w-auto mr-1" id="" required />
+                <input type="time" class="form-control d-inline-block align-middle w-auto" id="" required />
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">受け取り店舗</label>
+                <select class="form-control" id="">
+                  <option selected>---</option>
+                  <option>銀座本店</option>
+                  <option>梅田店</option>
+                  <option>京都店</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  メールアドレス
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <input type="email" class="form-control" id="" required />
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block text-dark">
+                  電話番号
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
+                <input type="tel" class="form-control" id="" required />
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success text-white px-5 py-2">追加する</button>
+              </div>
+            </form>
+          </div>
+          <!-- .wrap -->
+          <div class="socket">©2020 TakeEats</div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    <div class="orverray"></div>
+  </body>
+</html>

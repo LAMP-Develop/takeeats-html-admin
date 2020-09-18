@@ -1,4 +1,13 @@
+::placeholder {
+  color: $white;
+}
+
 .form {
+  &-group {
+    margin-bottom: $font-size-base;
+    padding-bottom: $font-size-base;
+    border-bottom: 1px solid $secondary;
+  }
   &-control {
     border: 0;
   }

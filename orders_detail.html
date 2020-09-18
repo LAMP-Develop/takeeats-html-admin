@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>注文管理 | TakeEats</title>
+    <title>注文詳細 | TakeEats</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
@@ -94,20 +94,10 @@
         <!-- #sidebarMenu -->
         <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
           <div class="wrap">
-            <h2 class="page-ttl">注文管理</h2>
-            <form class="form-inline border-top border-bottom py-3">
-              <input type="search" class="form-control w-auto mr-2" id="" placeholder="検索" />
-              <button type="button" class="btn btn-secondary">絞り込み</button>
-            </form>
-            <div class="my-4 d-flex justify-content-between">
-              <button type="button" class="btn btn-light rounded-pill px-3">CSVダウンロード</button>
-              <a class="btn btn-success text-white" href="./orders_add.html">
-                <i class="d-inline-block align-middle" data-feather="plus-circle"></i>
-                <span class="d-inline-block align-middle">新規追加</span>
-              </a>
-            </div>
-            <div class="order-list no-scroll">
-              <div class="order-item">
+            <h2 class="page-ttl">注文詳細</h2>
+            <div class="mb-4">
+              <h3 class="page-ttl-sub">基本情報</h3>
+              <div class="order-item w-100">
                 <div class="order-item-head">
                   <span>2020-06-02 12:00</span>
                   <span>お持ち帰り</span>
@@ -117,8 +107,12 @@
                     <span class="furi">ヤマダ タロウ</span>
                     <span>山田 太郎</span>
                   </p>
-                  <table class="table table-sm table-borderless">
+                  <table class="table table-sm table-borderless w-auto">
                     <tbody>
+                      <tr>
+                        <th>注文番号</th>
+                        <td>000000000000</td>
+                      </tr>
                       <tr>
                         <th>時間</th>
                         <td>2020-06-02 12:00</td>
@@ -127,128 +121,67 @@
                         <th>場所</th>
                         <td>京都四条本店</td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <div class="text-center">
-                    <a class="btn btn-block btn-dark" href="./orders_detail.html">詳細を見る</a>
-                  </div>
-                </div>
-              </div>
-              <!-- .order-item -->
-              <div class="order-item">
-                <div class="order-item-head">
-                  <span>2020-06-02 12:00</span>
-                  <span>お持ち帰り</span>
-                </div>
-                <div class="order-item-body">
-                  <p class="name">
-                    <span class="furi">ヤマダ タロウ</span>
-                    <span>山田 太郎</span>
-                  </p>
-                  <table class="table table-sm table-borderless">
-                    <tbody>
                       <tr>
-                        <th>時間</th>
-                        <td>2020-06-02 12:00</td>
+                        <th>メールアドレス</th>
+                        <td>info@example.com</td>
                       </tr>
                       <tr>
-                        <th>場所</th>
-                        <td>京都四条本店</td>
+                        <th>電話番号</th>
+                        <td>000-0000-0000</td>
                       </tr>
                     </tbody>
                   </table>
-                  <div class="text-center">
-                    <a class="btn btn-block btn-dark" href="./orders_detail.html">詳細を見る</a>
-                  </div>
-                </div>
-              </div>
-              <!-- .order-item -->
-              <div class="order-item">
-                <div class="order-item-head">
-                  <span>2020-06-02 12:00</span>
-                  <span>お持ち帰り</span>
-                </div>
-                <div class="order-item-body">
-                  <p class="name">
-                    <span class="furi">ヤマダ タロウ</span>
-                    <span>山田 太郎</span>
-                  </p>
-                  <table class="table table-sm table-borderless">
-                    <tbody>
-                      <tr>
-                        <th>時間</th>
-                        <td>2020-06-02 12:00</td>
-                      </tr>
-                      <tr>
-                        <th>場所</th>
-                        <td>京都四条本店</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="text-center">
-                    <a class="btn btn-block btn-dark" href="./orders_detail.html">詳細を見る</a>
-                  </div>
-                </div>
-              </div>
-              <!-- .order-item -->
-              <div class="order-item">
-                <div class="order-item-head">
-                  <span>2020-06-02 12:00</span>
-                  <span>お持ち帰り</span>
-                </div>
-                <div class="order-item-body">
-                  <p class="name">
-                    <span class="furi">ヤマダ タロウ</span>
-                    <span>山田 太郎</span>
-                  </p>
-                  <table class="table table-sm table-borderless">
-                    <tbody>
-                      <tr>
-                        <th>時間</th>
-                        <td>2020-06-02 12:00</td>
-                      </tr>
-                      <tr>
-                        <th>場所</th>
-                        <td>京都四条本店</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="text-center">
-                    <a class="btn btn-block btn-dark" href="./orders_detail.html">詳細を見る</a>
-                  </div>
-                </div>
-              </div>
-              <!-- .order-item -->
-              <div class="order-item">
-                <div class="order-item-head">
-                  <span>2020-06-02 12:00</span>
-                  <span>お持ち帰り</span>
-                </div>
-                <div class="order-item-body">
-                  <p class="name">
-                    <span class="furi">ヤマダ タロウ</span>
-                    <span>山田 太郎</span>
-                  </p>
-                  <table class="table table-sm table-borderless">
-                    <tbody>
-                      <tr>
-                        <th>時間</th>
-                        <td>2020-06-02 12:00</td>
-                      </tr>
-                      <tr>
-                        <th>場所</th>
-                        <td>京都四条本店</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="text-center">
-                    <a class="btn btn-block btn-dark" href="./orders_detail.html">詳細を見る</a>
-                  </div>
                 </div>
               </div>
               <!-- .order-item -->
             </div>
-            <!-- .order-list -->
+            <div class="mb-4">
+              <h3 class="page-ttl-sub">注文内容</h3>
+              <div class="order-menus">
+                <div class="order-menus-list">
+                  <div class="order-menus-item">
+                    <div class="thumbnail">
+                      <img src="./dist/images/menu1.png" alt="">
+                    </div>
+                    <div class="info">
+                      <p class="name">トマトとエビのパスタ</p>
+                      <p class="price">980</p>
+                    </div>
+                    <div class="count">x 1</div>
+                  </div>
+                  <!-- .order-menus-item -->
+                  <div class="order-menus-item">
+                    <div class="thumbnail">
+                      <img src="./dist/images/menu1.png" alt="">
+                    </div>
+                    <div class="info">
+                      <p class="name">トマトとエビのパスタ</p>
+                      <p class="price">980</p>
+                    </div>
+                    <div class="count">x 1</div>
+                  </div>
+                  <!-- .order-menus-item -->
+                  <div class="order-menus-item">
+                    <div class="thumbnail">
+                      <img src="./dist/images/menu1.png" alt="">
+                    </div>
+                    <div class="info">
+                      <p class="name">トマトとエビのパスタ</p>
+                      <p class="price">980</p>
+                    </div>
+                    <div class="count">x 1</div>
+                  </div>
+                  <!-- .order-menus-item -->
+                </div>
+                <!-- .order-menus-list -->
+                <div class="order-menus-price">
+                  <span class="ttl">合計</span>
+                  <span class="price">2,940</span>
+                </div>
+                <!-- .order-menus-price -->
+              </div>
+              <!-- .order-menus -->
+            </div>
           </div>
           <!-- .wrap -->
           <div class="socket">©2020 TakeEats</div>

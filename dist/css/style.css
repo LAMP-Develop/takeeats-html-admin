@@ -7332,6 +7332,10 @@ body.open .navbar-toggle-btn {
   padding-left: 0.5em;
   margin-bottom: 1.5em;
   border-left: 4px solid #e6dad3; }
+  .page-ttl-sub {
+    font-size: 0.875rem;
+    color: #888888;
+    margin-bottom: 1em; }
 
 .content {
   position: relative;
@@ -7390,12 +7394,12 @@ body.open .navbar-toggle-btn {
           .content.sales .price > span.compa > span {
             color: #4cb944; }
 
-.oreder-list {
+.order-list {
   overflow-x: scroll;
   display: block;
   white-space: nowrap;
   padding: 0.5rem 0.5rem 1rem; }
-  .oreder-list.no-scroll {
+  .order-list.no-scroll {
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
@@ -7403,19 +7407,19 @@ body.open .navbar-toggle-btn {
     align-items: flex-start;
     white-space: normal;
     padding: 0; }
-    .oreder-list.no-scroll .oreder-item {
+    .order-list.no-scroll .order-item {
       display: block;
       width: 31%;
       margin-right: 3.5%;
       margin-bottom: 3.5%; }
       @media (max-width: 991.98px) {
-        .oreder-list.no-scroll .oreder-item {
+        .order-list.no-scroll .order-item {
           width: 100%;
           margin-right: 0 !important; } }
-      .oreder-list.no-scroll .oreder-item:nth-child(3n) {
+      .order-list.no-scroll .order-item:nth-child(3n) {
         margin-right: 0; }
 
-.oreder-item {
+.order-item {
   display: inline-block;
   vertical-align: top;
   margin-right: 1rem;
@@ -7423,31 +7427,92 @@ body.open .navbar-toggle-btn {
   white-space: normal;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
   background-color: #fff; }
-  .oreder-item-head {
+  .order-item-head {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e0e0e0;
     padding: 0.875rem;
     color: #888888; }
-  .oreder-item-body {
+  .order-item-body {
     padding: 0.875rem; }
-    .oreder-item-body .name {
+    .order-item-body .name {
       margin: 0; }
-      .oreder-item-body .name span {
+      .order-item-body .name span {
         display: block;
         font-weight: bold;
         font-size: 1.125rem; }
-        .oreder-item-body .name span.furi {
+        .order-item-body .name span.furi {
           color: #888888;
           font-size: 12px;
           line-height: 1;
           font-weight: normal; }
-    .oreder-item-body .table {
+    .order-item-body .table {
       width: 100%;
       margin: 0.5rem 0; }
-      .oreder-item-body .table th {
+      .order-item-body .table th {
         font-weight: normal;
         color: #888888; }
+
+.order-menus {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff; }
+  .order-menus-list {
+    overflow: hidden; }
+  .order-menus-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.875rem;
+    border-bottom: 2px solid #e0e0e0; }
+    .order-menus-item .thumbnail {
+      margin-right: 1rem; }
+    .order-menus-item .info {
+      margin-right: 1rem; }
+      .order-menus-item .info .name {
+        margin: 0;
+        font-weight: bold; }
+      .order-menus-item .info .price {
+        margin: 5px 0 0;
+        font-weight: bold;
+        color: #eb5a3c;
+        letter-spacing: normal;
+        font-size: 1rem; }
+        .order-menus-item .info .price::before {
+          content: "￥";
+          margin-right: 3px;
+          color: #000000;
+          font-size: 0.875rem;
+          font-weight: normal; }
+    .order-menus-item .count {
+      align-self: flex-end;
+      font-size: 0.875rem;
+      font-weight: bold; }
+  .order-menus-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.875rem;
+    font-weight: bold;
+    line-height: 1; }
+    .order-menus-price .price {
+      font-weight: bold;
+      color: #eb5a3c;
+      letter-spacing: normal;
+      font-size: 1rem; }
+      .order-menus-price .price::before {
+        content: "￥";
+        margin-right: 3px;
+        color: #000000;
+        font-size: 0.875rem;
+        font-weight: normal; }
+
+::placeholder {
+  color: #fff; }
+
+.form-group {
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid #e0e0e0; }
 
 .form-control {
   border: 0; }

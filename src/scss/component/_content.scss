@@ -5,12 +5,18 @@
   font-size: 10px;
   text-align: center;
 }
+
 .page-ttl {
   font-size: $font-size-base * 1.3;
   font-weight: bold;
   padding-left: 0.5em;
   margin-bottom: 1.5em;
   border-left: 4px solid #e6dad3;
+  &-sub {
+    font-size: $font-size-base;
+    color: $dark;
+    margin-bottom: 1em;
+  }
 }
 
 .content {
@@ -86,7 +92,7 @@
   }
 }
 
-.oreder {
+.order {
   &-list {
     overflow-x: scroll;
     display: block;
@@ -100,7 +106,7 @@
       align-items: flex-start;
       white-space: normal;
       padding: 0;
-      .oreder-item {
+      .order-item {
         display: block;
         width: 31%;
         margin-right: 3.5%;
@@ -152,6 +158,70 @@
         th {
           font-weight: normal;
           color: $dark;
+        }
+      }
+    }
+  }
+  &-menus {
+    display: inline-block;
+    vertical-align: top;
+    background-color: $white;
+    &-list {
+      overflow: hidden;
+    }
+    &-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: $font-size-base;
+      border-bottom: 2px solid $secondary;
+      .thumbnail {
+        margin-right: 1rem;
+      }
+      .info {
+        margin-right: 1rem;
+        .name {
+          margin: 0;
+          font-weight: bold;
+        }
+        .price {
+          margin: 5px 0 0;
+          font-weight: bold;
+          color: $primary;
+          letter-spacing: normal;
+          font-size: 1rem;
+          &::before {
+            content: "￥";
+            margin-right: 3px;
+            color: $body-color;
+            font-size: $font-size-base;
+            font-weight: normal;
+          }
+        }
+      }
+      .count {
+        align-self: flex-end;
+        font-size: $font-size-base;
+        font-weight: bold;
+      }
+    }
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      padding: $font-size-base;
+      font-weight: bold;
+      line-height: 1;
+      .price {
+        font-weight: bold;
+        color: $primary;
+        letter-spacing: normal;
+        font-size: 1rem;
+        &::before {
+          content: "￥";
+          margin-right: 3px;
+          color: $body-color;
+          font-size: $font-size-base;
+          font-weight: normal;
         }
       }
     }
