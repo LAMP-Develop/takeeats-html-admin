@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>管理画面 | TakeEats</title>
+    <title>商品一覧 | TakeEats</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
   </head>
   <body>
-    <nav id="navbar" class="navbar bg-primary flex-md-nowrap p-0">
-      <a class="navbar-brand col-md-2 col-6 mr-md-3 mr-0 px-3" href="./index.html">
+    <nav id="navbar" class="navbar bg-primary flex-lg-nowrap p-0">
+      <a class="navbar-brand col-lg-2 col-6 mr-lg-3 mr-0 px-3" href="./index.html">
         <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
       </a>
-      <span class="mr-auto text-white d-md-block d-none">こんにちは、TakeCafe</span>
-      <a class="btn btn-light rounded-pill mr-5 px-4 d-md-block d-none" href="https://system.tale-eats.jp/demo-shop/">
+      <span class="mr-auto text-white d-lg-block d-none">こんにちは、TakeCafe</span>
+      <a class="btn btn-light rounded-pill mr-5 px-4 d-lg-block d-none" href="https://system.tale-eats.jp/demo-shop/">
         <span class="d-inline-block align-middle">サイトを確認する</span>
         <i class="d-inline-block align-middle" data-feather="external-link"></i>
       </a>
@@ -26,8 +26,8 @@
     <!-- .navbar -->
     <div class="container-fluid">
       <div class="row">
-        <nav id="sidebarMenu" class="col-md-2 d-md-block px-0 bg-white sidebar">
-          <div class="pt-md-5">
+        <nav id="sidebarMenu" class="col-lg-2 d-lg-block px-0 bg-white sidebar">
+          <div class="pt-lg-5">
             <div class="head">
               <p>
                 こんにちは、
@@ -92,7 +92,7 @@
           </div>
         </nav>
         <!-- #sidebarMenu -->
-        <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
+        <main id="main" role="main" class="col-lg-10 ml-sm-auto px-lg-4 bg-light">
           <div class="wrap">
             <h2 class="page-ttl">商品の追加・編集</h2>
             <div class="page-tab">
@@ -119,7 +119,13 @@
             </div>
             <div class="item__list">
               <div class="item__list-wrap">
-                <h3 class="item__list-name">パスタ・ピザ</h3>
+                <h3 class="item__list-name">
+                  <span>パスタ・ピザ</span>
+                  <a class="btn btn-success text-white float-right" href="./item_add.html">
+                    <i class="d-inline-block align-middle" data-feather="plus-circle"></i>
+                    <span class="d-inline-block align-middle">新規追加</span>
+                  </a>
+                </h3>
                 <table class="item__list-table">
                   <thead>
                     <tr>
@@ -131,10 +137,110 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>画像</td>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
                       <td>トマトとエビのパスタ</td>
-                      <td>980</td>
-                      <td>編集</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- .item__list-wrap -->
+              <div class="item__list-wrap">
+                <h3 class="item__list-name">
+                  <span>サイドメニュー</span>
+                  <a class="btn btn-success text-white float-right" href="./item_add.html">
+                    <i class="d-inline-block align-middle" data-feather="plus-circle"></i>
+                    <span class="d-inline-block align-middle">新規追加</span>
+                  </a>
+                </h3>
+                <table class="item__list-table">
+                  <thead>
+                    <tr>
+                      <th>画像</th>
+                      <th>商品名</th>
+                      <th>価格</th>
+                      <th>編集</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img class="item__list-thumbnail" src="./dist/images/menu1.png" alt="" />
+                      </td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>
+                        <span class="price">980</span>
+                      </td>
+                      <td>
+                        <a class="edit" href="./item_edit.html">
+                          <i data-feather="edit-2"></i>
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>

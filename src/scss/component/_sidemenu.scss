@@ -1,8 +1,11 @@
 #sidebarMenu {
+  z-index: 1;
+  position: fixed;
+  top: 55.8px;
+  left: 0;
   @include media-breakpoint-down(md) {
     z-index: 999;
-    position: fixed;
-    top: 0;
+    left: auto;
     right: -75vw;
     width: 75vw;
     height: 100vh;

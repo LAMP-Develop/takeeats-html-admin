@@ -93,12 +93,6 @@
   &.sales {
     overflow: hidden;
     border-radius: 1rem;
-    .content-body {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      background-image: url("../images/bg_chart.png");
-    }
     .price {
       text-align: center;
       margin: 0;

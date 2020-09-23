@@ -1,16 +1,22 @@
-input,
-textarea,
-select {
-  -webkit-appearance: none;
-}
-
 .form {
   &-group {
     margin-bottom: $font-size-base;
     padding-bottom: $font-size-base;
     border-bottom: 1px solid $secondary;
+    label {
+      display: block;
+      color: #888888;
+    }
   }
   &-control {
     border: 0;
+  }
+}
+
+.input {
+  &-group {
+    &-text {
+      border: 0;
+    }
   }
 }
