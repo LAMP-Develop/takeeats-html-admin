@@ -7337,6 +7337,33 @@ body.open .navbar-toggle-btn {
     color: #888888;
     margin-bottom: 1em; }
 
+.page-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0; }
+  .page-tab > a {
+    display: block;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    color: #888888;
+    border-bottom: 2px solid #fff; }
+    .page-tab > a.active {
+      color: #eb5a3c;
+      border-color: #eb5a3c; }
+    .page-tab > a:nth-child(2n) {
+      border-left: 1px solid #f4f3ef;
+      border-right: 1px solid #f4f3ef; }
+    .page-tab > a > span {
+      display: block;
+      font-size: 12px; }
+    .page-tab > a > .feather {
+      width: 1rem;
+      height: 1rem;
+      margin-bottom: 5px; }
+
 .content {
   position: relative;
   margin-bottom: 1.5rem;
@@ -7518,6 +7545,24 @@ select {
 
 .form-control {
   border: 0; }
+
+.item-cats {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 1rem 1rem 1rem 0;
+  margin: 1rem 0;
+  border-bottom: 1px solid #e0e0e0; }
+  .item-cats > a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    border-radius: 10rem;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal; }
 
 
 /*# sourceMappingURL=style.css.map*/

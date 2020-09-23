@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理画面 | TakeEats</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="./dist/js/bundle.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar bg-primary flex-md-nowrap p-0">
+      <a class="navbar-brand col-md-2 col-6 mr-md-3 mr-0 px-3" href="./index.html">
+        <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+      </a>
+      <span class="mr-auto text-white d-md-block d-none">こんにちは、TakeCafe</span>
+      <a class="btn btn-light rounded-pill mr-5 px-4 d-md-block d-none" href="https://system.tale-eats.jp/demo-shop/">
+        <span class="d-inline-block align-middle">サイトを確認する</span>
+        <i class="d-inline-block align-middle" data-feather="external-link"></i>
+      </a>
+    </nav>
+    <div class="navbar-toggle-btn">
+      <i data-feather="menu"></i>
+    </div>
+    <!-- .navbar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-2 d-md-block px-0 bg-white sidebar">
+          <div class="pt-md-5">
+            <div class="head">
+              <p>
+                こんにちは、
+                <span class="d-block">TakeCafe</span>
+              </p>
+              <a href="">ログアウト</a>
+            </div>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="feather-icon"><i data-feather="home"></i></span>
+                  <span>トップ</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./orders.html">
+                  <span class="feather-icon"><i data-feather="clipboard"></i></span>
+                  <span>注文管理</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./item.html">
+                  <span class="feather-icon"><i data-feather="book"></i></span>
+                  <span>商品の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./post.html">
+                  <span class="feather-icon"><i data-feather="feather"></i></span>
+                  <span>お知らせの更新</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./data.html">
+                  <span class="feather-icon"><i data-feather="bar-chart"></i></span>
+                  <span>データ分析をみる</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./shop.html">
+                  <span class="feather-icon"><i data-feather="flag"></i></span>
+                  <span>店舗の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./setting.html">
+                  <span class="feather-icon"><i data-feather="settings"></i></span>
+                  <span>設定</span>
+                </a>
+              </li>
+            </ul>
+            <div class="foot">
+              <a href="">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">ご利用マニュアルのダウンロード</span>
+              </a>
+              <a href="./contact.html">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- #sidebarMenu -->
+        <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
+          <div class="wrap">
+            <h2 class="page-ttl">商品の追加・編集</h2>
+            <div class="page-tab">
+              <a class="active" href="./item.html">
+                <i data-feather="book"></i>
+                <span>商品一覧</span>
+              </a>
+              <a class="" href="./category.html">
+                <i data-feather="tag"></i>
+                <span>カテゴリ</span>
+              </a>
+              <a class="" href="./option.html">
+                <i data-feather="plus-square"></i>
+                <span>オプション</span>
+              </a>
+            </div>
+            <form class="form-inline bg-white p-3">
+              <input type="search" class="form-control w-50 mr-2 bg-light" id="" placeholder="検索" />
+              <button type="button" class="btn btn-secondary">絞り込み</button>
+            </form>
+            <div class="item-cats">
+              <a href="#cats-1">パスタ・ピザ</a>
+              <a href="#cats-2">サイドメニュー</a>
+            </div>
+            <div class="item__list">
+              <div class="item__list-wrap">
+                <h3 class="item__list-name">パスタ・ピザ</h3>
+                <table class="item__list-table">
+                  <thead>
+                    <tr>
+                      <th>画像</th>
+                      <th>商品名</th>
+                      <th>価格</th>
+                      <th>編集</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>画像</td>
+                      <td>トマトとエビのパスタ</td>
+                      <td>980</td>
+                      <td>編集</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- .item__list-wrap -->
+            </div>
+            <!-- .item__list -->
+          </div>
+          <!-- .wrap -->
+          <div class="socket">©2020 TakeEats</div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    <div class="orverray"></div>
+  </body>
+</html>

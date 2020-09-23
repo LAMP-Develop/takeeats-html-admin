@@ -1,0 +1,21 @@
+.item {
+  &-cats {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 1rem 1rem 1rem 0;
+    margin: 1rem 0;
+    border-bottom: 1px solid $secondary;
+    & > a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
+      padding: 0.5em 1em;
+      background-color: $white;
+      border-radius: 10rem;
+      color: $body-color;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: normal;
+    }
+  }
+}
