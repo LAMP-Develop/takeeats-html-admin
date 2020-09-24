@@ -20,10 +20,12 @@
   }
   &-control {
     border: 0;
-    font-size: 15px;
-    border-radius: 2px;
-    height: auto;
-    padding: 0.7rem;
+    &:not([type="search"]) {
+      font-size: 15px;
+      border-radius: 2px;
+      height: auto;
+      padding: 0.7rem;
+    }
   }
   &-check {
     display: flex;

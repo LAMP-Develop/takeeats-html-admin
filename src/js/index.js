@@ -16,10 +16,11 @@ $(function () {
   $(window).on("load resize", function () {
     let nav_h = $("#navbar").outerHeight();
     let window_w = $(window).width();
-    console.log(window_w);
     // padding調整
     $("body").css("padding-top", nav_h + "px");
-    $("#sidebarMenu").css("top", nav_h + "px");
+    if (window_w > 991.98) {
+      $("#sidebarMenu").css("top", nav_h + "px");
+    }
   });
 
   // SP Menu

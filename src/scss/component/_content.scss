@@ -24,14 +24,22 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    background-color: $white;
     border-bottom: 1px solid $secondary;
+    background-color: $white;
+    @include media-breakpoint-down(md) {
+      background-color: transparent;
+    }
     & > a {
       display: block;
       padding: 0.5rem 2rem;
       text-align: center;
       color: $dark;
       border-bottom: 2px solid $white;
+      @include media-breakpoint-down(md) {
+        padding: 0.5rem;
+        min-width: calc(100% / 3);
+        background-color: $white;
+      }
       &.active {
         color: $primary;
         border-color: $primary;
