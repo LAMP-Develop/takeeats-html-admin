@@ -137,12 +137,53 @@
                 <label for="">オプション表示</label>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="opt1" />
-                  <label class="form-check-label" for="opt1">大盛り</label>
+                  <label class="form-check-label text-body" for="opt1">大盛り</label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="opt2" />
-                  <label class="form-check-label" for="opt2">ドリンクセット</label>
+                  <label class="form-check-label text-body" for="opt2">ドリンクセット</label>
                 </div>
+              </div>
+              <div class="form-group">
+                <label for="">画像</label>
+                <div class="form-img">
+                  <label class="form-img-label" for="itemImg1">
+                    <input type="file" name="itemImg1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="itemImg1" />
+                  </label>
+                  <label class="form-img-label" for="itemImg2">
+                    <input type="file" name="itemImg2" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="itemImg2" />
+                  </label>
+                  <label class="form-img-label" for="itemImg3">
+                    <input type="file" name="itemImg3" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="itemImg3" />
+                  </label>
+                </div>
+                <small class="form-text text-muted d-block">
+                  ※3枚まで追加できます。
+                  <br />
+                  ※幅1204pxの画像を推奨しています。
+                  <br />
+                  ※対応ファイル：jpg.png.gif
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="">公開予約</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="postPublic" />
+                  <label class="form-check-label text-body" for="postPublic">公開予約をする</label>
+                </div>
+                <div id="postPublic-date" class="form-date">
+                  <label for="">公開日時</label>
+                  <div class="form-inline">
+                    <input type="date" name="" value="" class="form-control w-auto mr-2" id="">
+                    <input type="number" name="" value="" min="0" max="24" class="form-control w-auto" id="" placeholder="23">
+                    <span class="mx-1">：</span>
+                    <input type="number" name="" value="" min="0" max="59" class="form-control w-auto" id="" placeholder="59">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <button type="button" class="btn bg-white text-success mr-2">下書き保存</button>
+                <button type="button" class="btn btn-success text-white">公開する</button>
               </div>
             </form>
           </div>

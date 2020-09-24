@@ -150,42 +150,84 @@
     }
   }
   &-item {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 1rem;
-    width: 370px;
-    white-space: normal;
-    box-shadow: 0 0 6px rgba($body-color, 0.15);
+    position: relative;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid $secondary;
+    color: $body-color;
+    background-color: $white;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%) rotate(45deg);
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid $dark;
+      border-right: 1px solid $dark;
+    }
+    .cats {
+      display: inline-block;
+      vertical-align: baseline;
+      font-size: 12px;
+      line-height: 1;
+      padding: 3px 0.5rem;
+      background-color: $warning;
+      color: $white;
+    }
+    .name {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+    .date {
+      color: $dark;
+      font-size: 12px;
+      margin: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+  &__detail {
     background-color: $white;
     &-head {
+      padding: $font-size-sm 1rem;
+      border-bottom: 1px solid $light;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $secondary;
-      padding: $font-size-base;
-      color: $dark;
+      span {
+        display: block;
+        line-height: 1;
+        color: $dark;
+      }
     }
     &-body {
-      padding: $font-size-base;
+      padding: 1rem;
       .name {
-        margin: 0;
         span {
           display: block;
           font-weight: bold;
           font-size: 1.125rem;
-          &.furi {
-            color: $dark;
-            font-size: 12px;
-            line-height: 1;
-            font-weight: normal;
-          }
+        }
+        .furi {
+          display: block;
+          color: $dark;
+          font-size: 12px;
+          font-weight: normal;
         }
       }
       .table {
-        width: 100%;
-        margin: 0.5rem 0;
+        margin: 0;
+        th,td {
+          padding: 0.25rem 0;
+        }
         th {
           font-weight: normal;
           color: $dark;
+          padding-right: 1rem;
         }
       }
     }
@@ -194,6 +236,9 @@
     display: inline-block;
     vertical-align: top;
     background-color: $white;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
     &-list {
       overflow: hidden;
     }

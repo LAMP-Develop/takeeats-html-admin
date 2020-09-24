@@ -28,4 +28,19 @@ $(function () {
     $("#sidebarMenu").toggleClass("open");
     $(this).toggleClass("active");
   });
+
+  // --- Add item ------
+  // 予約公開設定
+  $("#postPublic").on("change", function () {
+    if ($(this).prop("checked")) {
+      $("#postPublic-date").css("display", "block");
+    } else {
+      $("#postPublic-date").css("display", "none");
+      $("#postPublic-date")
+        .find("input")
+        .each(function () {
+          $(this).val("");
+        });
+    }
+  });
 });
