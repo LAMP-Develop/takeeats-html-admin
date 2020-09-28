@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>基本設定 | TakeEats</title>
+    <title>全体設定 | TakeEats</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
@@ -96,30 +96,46 @@
           <div class="wrap">
             <h2 class="page-ttl">設定</h2>
             <div class="page-tab">
-              <a class="active" href="./">
+              <a class="active" href="./setting.html">
                 <i data-feather="monitor"></i>
-                <span>アカウント設定</span>
+                <span>全体設定</span>
               </a>
-              <a class="" href="./">
-                <i data-feather="feather"></i>
-                <span>カスタマイズ設定</span>
+              <a class="" href="./setting-service.html">
+                <i data-feather="settings"></i>
+                <span>サービス設定</span>
               </a>
-              <a class="" href="./">
-                <i data-feather="file-text"></i>
-                <span>ページ修正</span>
-              </a>
+              <!-- <a class="" href="./setting-shop.html">
+                <i data-feather="tool"></i>
+                <span>店舗基本設定</span>
+              </a> -->
             </div>
 
             <form class="mt-4" action="" method="post">
-              <h3 class="font-weight-bold h5 mb-3">1. 店舗について</h3>
+              <h3 class="font-weight-bold h5 mb-3">店舗について</h3>
               <div class="form-group">
-                <label for="">店舗名</label>
+                <label for="">ショップ名または会社名</label>
                 <input type="text" class="form-control" id="" />
+              </div>
+              <div class="form-group">
+                <label for="">ショップの説明</label>
+                <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="">販売する料理のカテゴリ</label>
+                <select name="" class="form-control" id="">
+                  <option value="">---</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="">デフォルト税率</label>
+                <select name="" class="form-control" id="">
+                  <option value="">---</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="">対応サービス</label>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="" />
+                  <input class="form-check-input" type="checkbox" value="" id="" checked />
                   <label class="form-check-label text-body" for="">お持ち帰り</label>
                 </div>
                 <div class="form-check">
@@ -132,16 +148,64 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="">注文からご用意までの時間</label>
-                <div class="input-group">
-                  <input type="number" min="0" class="form-control" id="" />
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">分</div>
-                  </div>
+                <label for="">デフォルト在庫数</label>
+                <input type="number" class="form-control w-auto" min="0" max="99999" id="" />
+              </div>
+              <div class="form-group">
+                <label for="">サイト内でお酒を販売しますか？</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="alcohol_flag" id="alcoholFlagTrue" value="0" id="" checked />
+                  <label class="form-check-label text-body" for="alcoholFlagTrue">販売しない</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="alcohol_flag" id="alcoholFlagFalse" value="1" id="" />
+                  <label class="form-check-label text-body" for="alcoholFlagFalse">販売する</label>
                 </div>
               </div>
-              <div class="mt-4">
-                <button type="button" class="btn btn-success text-white">保存する</button>
+              <h3 class="font-weight-bold h5 mb-3 mt-4">SNSについて</h3>
+              <div class="form-group row align-items-center mx-0">
+                <label for="facebook" class="col-3 m-0 px-0">Facebook</label>
+                <div class="col-9 px-0">
+                  <input type="text" name="facebook" class="form-control" id="facebook" />
+                </div>
+              </div>
+              <div class="form-group row align-items-center mx-0">
+                <label for="twitter" class="col-3 m-0 px-0">Twitter</label>
+                <div class="col-9 px-0">
+                  <input type="text" name="twitter" class="form-control" id="twitter" />
+                </div>
+              </div>
+              <div class="form-group row align-items-center mx-0">
+                <label for="instagram" class="col-3 m-0 px-0">Instagram</label>
+                <div class="col-9 px-0">
+                  <input type="text" name="instagram" class="form-control" id="instagram" />
+                </div>
+              </div>
+              <h3 class="font-weight-bold h5 mb-3 mt-4">振込口座について</h3>
+              <div class="form-group">
+                <label for="">振込先の口座名義</label>
+                <input type="text" class="form-control" id="" />
+              </div>
+              <div class="form-group">
+                <label for="">金融機関名</label>
+                <input type="text" class="form-control" id="" />
+              </div>
+              <div class="form-group">
+                <label for="">支店名</label>
+                <input type="text" class="form-control" id="" />
+              </div>
+              <div class="form-group">
+                <label for="">預金種別</label>
+                <section class="form-control w-auto" name="">
+                  <option value="">--</option>
+                </section>
+              </div>
+              <div class="form-group">
+                <label for="">口座番号</label>
+                <input type="text" class="form-control" id="" />
+              </div>
+              <div class="mt-4 text-center">
+                <button type="button" class="btn btn-success text-white px-5">保存する</button>
               </div>
             </form>
           </div>

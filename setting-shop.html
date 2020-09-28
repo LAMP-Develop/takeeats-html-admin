@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>管理画面 | TakeEats</title>
+    <title>店舗基本設定 | TakeEats</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
@@ -94,84 +94,22 @@
         <!-- #sidebarMenu -->
         <main id="main" role="main" class="col-lg-10 ml-sm-auto px-lg-4 bg-light">
           <div class="wrap">
-            <h2 class="page-ttl">トップ</h2>
-            <div class="d-lg-flex">
-              <div class="content">
-                <div class="content-head">
-                  <h3>
-                    <i data-feather="info"></i>
-                    <span>TakeEatからのお知らせ</span>
-                  </h3>
-                </div>
-                <div class="content-body">
-                  <a class="text-body" href="">
-                    <span class="d-block text-dark">2020-06-02</span>
-                    <span class="d-block">管理画面のデザインをアップデートしました。</span>
-                  </a>
-                </div>
-              </div>
-              <!-- .content -->
-              <div class="content sales">
-                <div class="content-head">
-                  <h3 class="text-center font-weight-bold">
-                    <span>本日の売上</span>
-                  </h3>
-                </div>
-                <div class="content-body">
-                  <p class="price">
-                    <span class="number">100,000</span>
-                    <span class="compa">
-                      前日比
-                      <span>19.89%</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <!-- .content -->
-              <div class="content">
-                <div class="content-head">
-                  <h3>
-                    <i data-feather="clipboard"></i>
-                    <span>最新注文</span>
-                    <span class="badge badge-pill badge-secondary">5</span>
-                  </h3>
-                  <a class="link" href="./orders.html">一覧へ</a>
-                </div>
-                <div class="content-body p-0">
-                  <div class="order-list">
-                    <a class="order-item" href="./orders_detail.html">
-                      <span class="cats">お持ち帰り</span>
-                      <p class="name">ヤマダ タロウ</p>
-                      <p class="date">2020-06-02 12:00</p>
-                    </a>
-                    <a class="order-item" href="./orders_detail.html">
-                      <span class="cats">お持ち帰り</span>
-                      <p class="name">ヤマダ タロウ</p>
-                      <p class="date">2020-06-02 12:00</p>
-                    </a>
-                    <a class="order-item" href="./orders_detail.html">
-                      <span class="cats">お持ち帰り</span>
-                      <p class="name">ヤマダ タロウ</p>
-                      <p class="date">2020-06-02 12:00</p>
-                    </a>
-                    <a class="order-item" href="./orders_detail.html">
-                      <span class="cats">お持ち帰り</span>
-                      <p class="name">ヤマダ タロウ</p>
-                      <p class="date">2020-06-02 12:00</p>
-                    </a>
-                    <a class="order-item" href="./orders_detail.html">
-                      <span class="cats">お持ち帰り</span>
-                      <p class="name">ヤマダ タロウ</p>
-                      <p class="date">2020-06-02 12:00</p>
-                    </a>
-                  </div>
-                  <!-- .order-list -->
-                </div>
-                <!-- .content-body -->
-              </div>
-              <!-- .content -->
+            <h2 class="page-ttl">設定</h2>
+            <div class="page-tab">
+              <a class="" href="./setting.html">
+                <i data-feather="monitor"></i>
+                <span>全体設定</span>
+              </a>
+              <a class="" href="./setting-service.html">
+                <i data-feather="settings"></i>
+                <span>サービス設定</span>
+              </a>
+              <a class="active" href="./setting-shop.html">
+                <i data-feather="tool"></i>
+                <span>店舗基本設定</span>
+              </a>
             </div>
-            <!-- .d-lg-flex -->
+
           </div>
           <!-- .wrap -->
           <div class="socket">©2020 TakeEats</div>

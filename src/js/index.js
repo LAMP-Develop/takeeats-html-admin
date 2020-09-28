@@ -4,6 +4,12 @@ import "../scss/app.scss";
 // JSインポート
 import "bootstrap";
 import "bootstrap-input-spinner";
+
+import { Calendar } from "@fullcalendar/core";
+import jaLocale from "@fullcalendar/core/locales/ja";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import bootstrapPlugin from "@fullcalendar/bootstrap";
+
 const feather = require("feather-icons");
 
 $(function () {
@@ -44,4 +50,16 @@ $(function () {
         });
     }
   });
+});
+
+// 個別カレンダー
+document.addEventListener("DOMContentLoaded", function () {
+  let calendarEl = document.getElementById("calendar");
+  if (calendarEl != null) {
+    let calendar = new Calendar(calendarEl, {
+      plugins: [dayGridPlugin, bootstrapPlugin],
+      locale: jaLocale,
+    });
+    calendar.render();
+  }
 });

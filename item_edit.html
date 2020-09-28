@@ -129,7 +129,7 @@
                     <input type="number" class="form-control" id="itemStock" value="1" />
                   </div>
                   <div class="col-auto">
-                    <button class="btn btn-info text-white">個別に設定する</button>
+                    <button class="btn btn-info text-white" type="button" data-toggle="modal" data-target="#itemCalendar">個別に設定する</button>
                   </div>
                 </div>
               </div>
@@ -174,10 +174,10 @@
                 <div id="postPublic-date" class="form-date">
                   <label for="">公開日時</label>
                   <div class="form-inline">
-                    <input type="date" name="" value="" class="form-control w-auto mr-2" id="">
-                    <input type="number" name="" value="" min="0" max="24" class="form-control w-auto" id="" placeholder="23">
+                    <input type="date" name="" value="" class="form-control w-auto mr-2" id="" />
+                    <input type="number" name="" value="" min="0" max="24" class="form-control w-auto" id="" placeholder="23" />
                     <span class="mx-1">：</span>
-                    <input type="number" name="" value="" min="0" max="59" class="form-control w-auto" id="" placeholder="59">
+                    <input type="number" name="" value="" min="0" max="59" class="form-control w-auto" id="" placeholder="59" />
                   </div>
                 </div>
               </div>
@@ -196,5 +196,25 @@
     </div>
     <!-- .container-fluid -->
     <div class="orverray"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="itemCalendar" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="itemCalendarLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold text-center" id="itemCalendarLabel">在庫設定</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="calendar"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-block btn-success text-white" data-dismiss="modal">更新する</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
