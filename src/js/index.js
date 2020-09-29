@@ -58,7 +58,7 @@ $(function () {
       $("#saleshop").addClass("select2-multiple");
       $("#saleshop").css("display", "block");
       $(".select2-multiple").select2({
-        theme: "default",
+        theme: "bootstrap4",
         placeholder: "キーワードで検索",
         language: "ja",
       });
