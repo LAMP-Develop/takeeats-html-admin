@@ -28,13 +28,15 @@
     }
   }
   &-check {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-color: $white;
-    padding: $font-size-sm;
-    margin-bottom: 3px;
+    &:not(.no-bg) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      background-color: $white;
+      padding: $font-size-sm;
+      margin-bottom: 3px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -80,6 +82,16 @@
   &-group {
     &-text {
       border: 0;
+    }
+  }
+}
+
+.select2 {
+  &-selection {
+    &--multiple {
+      border: 0 !important;
+      padding: 0.25rem !important;
+      border-radius: 2px !important;
     }
   }
 }

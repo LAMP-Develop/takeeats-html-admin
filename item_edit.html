@@ -7,7 +7,7 @@
     <title>商品編集 | TakeEats</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
-    <script src="./dist/js/bundle.js" defer></script>
+    <script src="./dist/js/bundle.js"></script>
   </head>
   <body>
     <nav id="navbar" class="navbar bg-primary flex-lg-nowrap p-0">
@@ -102,11 +102,17 @@
                 <input type="hidden" name="" />
               </div>
               <div class="form-group">
-                <label for="itemName">商品名</label>
+                <label for="itemName">
+                  商品名
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
                 <input type="text" class="form-control" id="itemName" />
               </div>
               <div class="form-group">
-                <label for="itemPrice">商品価格（税別）</label>
+                <label for="itemPrice">
+                  商品価格（税込）
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">￥</div>
@@ -116,20 +122,23 @@
               </div>
               <div class="form-group">
                 <label for="itemUnit">商品単位</label>
-                <input type="text" class="form-control" id="itemUnit" />
+                <input type="text" class="form-control w-auto" id="itemUnit" placeholder="個" />
               </div>
               <div class="form-group">
                 <label for="itemDesc">商品説明</label>
                 <textarea class="form-control" id="itemDesc" rows="10"></textarea>
               </div>
               <div class="form-group">
-                <label for="itemStock">1日の在庫数</label>
+                <label for="item-stock">
+                  1日の在庫数
+                  <span class="badge badge-warning text-white ml-1">必須</span>
+                </label>
                 <div class="form-row align-items-center">
                   <div class="col-auto">
-                    <input type="number" class="form-control" id="itemStock" value="1" />
+                    <input type="number" class="form-control" id="item-stock" value="99" />
                   </div>
                   <div class="col-auto">
-                    <button class="btn btn-info text-white" type="button" data-toggle="modal" data-target="#itemCalendar">個別に設定する</button>
+                    <button class="btn btn-info text-white" id="stock-btn" type="button" data-toggle="modal" data-target="#itemCalendar">個別に設定する</button>
                   </div>
                 </div>
               </div>
@@ -164,6 +173,37 @@
                   <br />
                   ※対応ファイル：jpg.png.gif
                 </small>
+              </div>
+              <div class="form-group">
+                <label for="">対応サービス</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" checked />
+                  <label class="form-check-label text-body" for="">お持ち帰り</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" />
+                  <label class="form-check-label text-body" for="">デリバリー</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" />
+                  <label class="form-check-label text-body" for="">お取り寄せ</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">販売店舗設定</label>
+                <div class="form-check form-check-inline no-bg">
+                  <input class="form-check-input" type="radio" name="saleshop-flag" id="all-shop" value="0" checked />
+                  <label class="form-check-label text-body" for="all-shop">すべての店舗で販売</label>
+                </div>
+                <div class="form-check form-check-inline no-bg">
+                  <input class="form-check-input" type="radio" name="saleshop-flag" id="specific-shop" value="1" />
+                  <label class="form-check-label text-body" for="specific-shop">特定の店舗で販売</label>
+                </div>
+                <div class="my-2"></div>
+                <select class="form-control" id="saleshop" name="saleshops[]" multiple="multiple" style="display: none">
+                  <option value="銀座本店">銀座本店</option>
+                  <option value="六本木店">六本木店</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="">公開予約</label>
