@@ -54,7 +54,7 @@ $(function () {
   });
   // 店舗設定
   $('input[name="saleshop-flag"]').on("change", function () {
-    if ($(this).val() == 1) {
+    if ($(this).val() == 1 || $(this).val() == 2) {
       $("#saleshop").addClass("select2-multiple");
       $("#saleshop").css("display", "block");
       $(".select2-multiple").select2({

@@ -196,8 +196,12 @@
                   <label class="form-check-label text-body" for="all-shop">すべての店舗で販売</label>
                 </div>
                 <div class="form-check form-check-inline no-bg">
-                  <input class="form-check-input" type="radio" name="saleshop-flag" id="specific-shop" value="1" />
+                  <input class="form-check-input js-specific-exclusion" type="radio" name="saleshop-flag" id="specific-shop" value="1" />
                   <label class="form-check-label text-body" for="specific-shop">特定の店舗で販売</label>
+                </div>
+                <div class="form-check form-check-inline no-bg">
+                  <input class="form-check-input js-specific-exclusion" type="radio" name="saleshop-flag" id="exclusion-shop" value="2">
+                  <label class="form-check-label text-body" for="exclusion-shop">特定の店舗を除外</label>
                 </div>
                 <div class="my-2"></div>
                 <select class="form-control" id="saleshop" name="saleshops[]" multiple="multiple" style="display: none">
@@ -206,18 +210,27 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="">公開予約</label>
+                <label for="">公開予約設定</label>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="postPublic" />
                   <label class="form-check-label text-body" for="postPublic">公開予約をする</label>
                 </div>
                 <div id="postPublic-date" class="form-date">
-                  <label for="">公開日時</label>
-                  <div class="form-inline">
-                    <input type="date" name="" value="" class="form-control w-auto mr-2" id="" />
-                    <input type="number" name="" value="" min="0" max="24" class="form-control w-auto" id="" placeholder="23" />
-                    <span class="mx-1">：</span>
-                    <input type="number" name="" value="" min="0" max="59" class="form-control w-auto" id="" placeholder="59" />
+                  <label for="">公開期間</label>
+                  <div class="d-flex justify-content-start align-items-center flex-wrap">
+                    <div class="form-inline">
+                      <input type="date" name="" value="" class="form-control form-control-sm w-auto mr-2" id="" />
+                      <input type="number" name="" value="" min="0" max="24" class="form-control form-control-sm w-auto" id="" placeholder="23" />
+                      <span class="mx-1">：</span>
+                      <input type="number" name="" value="" min="0" max="59" class="form-control form-control-sm w-auto" id="" placeholder="59" />
+                    </div>
+                    <span class="mx-2">〜</span>
+                    <div class="form-inline">
+                      <input type="date" name="" value="" class="form-control form-control-sm w-auto mr-2" id="" />
+                      <input type="number" name="" value="" min="0" max="24" class="form-control form-control-sm w-auto" id="" placeholder="23" />
+                      <span class="mx-1">：</span>
+                      <input type="number" name="" value="" min="0" max="59" class="form-control form-control-sm w-auto" id="" placeholder="59" />
+                    </div>
                   </div>
                 </div>
               </div>
