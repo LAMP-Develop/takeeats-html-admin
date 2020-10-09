@@ -26,3 +26,26 @@
     line-height: 2;
   }
 }
+
+.nav-pills {
+  .nav-link {
+    border-radius: 0;
+    background-color: $white;
+    border-right: 1px solid $secondary;
+  }
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+    }
+    &:last-child {
+      .nav-link {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-right: 0;
+      }
+    }
+  }
+}

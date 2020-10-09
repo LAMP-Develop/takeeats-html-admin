@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
     <link rel="stylesheet" href="./dist/css/style.css" />
     <script src="./dist/js/bundle.js" defer></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
   </head>
   <body>
     <nav id="navbar" class="navbar bg-primary flex-lg-nowrap p-0">
@@ -94,72 +95,28 @@
         <!-- #sidebarMenu -->
         <main id="main" role="main" class="col-lg-10 ml-sm-auto px-lg-4 bg-light">
           <div class="wrap">
-            <h2 class="page-ttl">スライドショー</h2>
+            <h2 class="page-ttl">お知らせ一覧</h2>
             <div class="page-tab">
               <a class="" href="./post.html">
                 <i data-feather="send"></i>
                 <span>お知らせ一覧</span>
               </a>
-              <a class="active" href="./slide.html">
+              <a class="" href="./slide.html">
                 <i data-feather="image"></i>
                 <span>スライドショー</span>
               </a>
-              <a class="" href="./page.html">
+              <a class="active" href="./page.html">
                 <i data-feather="book"></i>
                 <span>ご利用ガイド</span>
               </a>
             </div>
-            <div class="my-4">
-              <div class="">
-                <img src="./dist/images/ex_slide.png" alt="" srcset="./dist/images/ex_slide.png 1x, ./dist/images/ex_slide@2x.png 2x">
-              </div>
-              <p class="m-0 mt-3">トップページに表示する画像を4枚まで設定いただけます。<br class="d-md-inline d-none">表示させたい画像をアップロードし更新ボタンを押してください。</p>
+            <div class="py-3"></div>
+            <div id="editor">
+              <p>ここにご利用についての説明が入ります。</p>
             </div>
-            <form action="">
-              <div class="form-group row">
-                <label for="" class="col-3 col-form-label text-body font-weight-bold">1枚目</label>
-                <div class="col-9">
-                  <label class="form-img-label" for="slide1">
-                    <input type="file" name="slide1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="slide1" />
-                  </label>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="" class="col-3 col-form-label text-body font-weight-bold">2枚目</label>
-                <div class="col-9">
-                  <label class="form-img-label" for="slide2">
-                    <input type="file" name="slide1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="slide2" />
-                  </label>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="" class="col-3 col-form-label text-body font-weight-bold">3枚目</label>
-                <div class="col-9">
-                  <label class="form-img-label" for="slide3">
-                    <input type="file" name="slide1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="slide3" />
-                  </label>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="" class="col-3 col-form-label text-body font-weight-bold">4枚目</label>
-                <div class="col-9">
-                  <label class="form-img-label" for="slide4">
-                    <input type="file" name="slide1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="slide4" />
-                  </label>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="" class="col-3 col-form-label text-body font-weight-bold">5枚目</label>
-                <div class="col-9">
-                  <label class="form-img-label" for="slide5">
-                    <input type="file" name="slide1" accept=".jpg, .jpeg, .png, .gif" class="form-img-input" id="slide5" />
-                  </label>
-                </div>
-              </div>
-              <div class="mt-4 text-center">
-                <button type="submit" class="btn btn-success text-white px-5">更新する</button>
-              </div>
-            </form>
+            <div class="mt-4">
+              <button class="btn btn-success text-white px-5 py-2">保存する</button>
+            </div>
           </div>
           <!-- .wrap -->
           <div class="socket">©2020 TakeEats</div>
@@ -170,5 +127,13 @@
     </div>
     <!-- .container-fluid -->
     <div class="orverray"></div>
+
+    <script>
+      ClassicEditor
+      .create(document.querySelector('#editor'))
+      .catch(error => {
+          console.error(error);
+      });
+    </script>
   </body>
 </html>

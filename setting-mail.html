@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全体設定 | TakeEats</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script src="./dist/js/bundle.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar bg-primary flex-lg-nowrap p-0">
+      <a class="navbar-brand col-lg-2 col-6 mr-lg-3 mr-0 px-3" href="./index.html">
+        <img src="./dist/images/logo.png" alt="TakeEats" srcset="./dist/images/logo.png 1x, ./dist/images/logo@2x.png 2x" />
+      </a>
+      <span class="mr-auto text-white d-lg-block d-none">こんにちは、TakeCafe</span>
+      <a class="btn btn-light rounded-pill mr-5 px-4 d-lg-block d-none" href="https://system.tale-eats.jp/demo-shop/">
+        <span class="d-inline-block align-middle">サイトを確認する</span>
+        <i class="d-inline-block align-middle" data-feather="external-link"></i>
+      </a>
+    </nav>
+    <div class="navbar-toggle-btn">
+      <i data-feather="menu"></i>
+    </div>
+    <!-- .navbar -->
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-lg-2 d-lg-block px-0 bg-white sidebar">
+          <div class="pt-lg-5">
+            <div class="head">
+              <p>
+                こんにちは、
+                <span class="d-block">TakeCafe</span>
+              </p>
+              <a href="">ログアウト</a>
+            </div>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="feather-icon"><i data-feather="home"></i></span>
+                  <span>トップ</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./orders.html">
+                  <span class="feather-icon"><i data-feather="clipboard"></i></span>
+                  <span>注文管理</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./item.html">
+                  <span class="feather-icon"><i data-feather="book"></i></span>
+                  <span>商品の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./post.html">
+                  <span class="feather-icon"><i data-feather="feather"></i></span>
+                  <span>お知らせの更新</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./data.html">
+                  <span class="feather-icon"><i data-feather="bar-chart"></i></span>
+                  <span>データ分析をみる</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./shop.html">
+                  <span class="feather-icon"><i data-feather="flag"></i></span>
+                  <span>店舗の追加・編集</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./setting.html">
+                  <span class="feather-icon"><i data-feather="settings"></i></span>
+                  <span>設定</span>
+                </a>
+              </li>
+            </ul>
+            <div class="foot">
+              <a href="">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">ご利用マニュアルのダウンロード</span>
+              </a>
+              <a href="./contact.html">
+                <i class="d-inline-block align-middle" data-feather="triangle"></i>
+                <span class="d-inline-block align-middle">お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- #sidebarMenu -->
+        <main id="main" role="main" class="col-lg-10 ml-sm-auto px-lg-4 bg-light">
+          <div class="wrap">
+            <h2 class="page-ttl">設定</h2>
+            <div class="page-tab">
+              <a class="" href="./setting.html">
+                <i data-feather="monitor"></i>
+                <span>全体設定</span>
+              </a>
+              <a class="" href="./setting-service.html">
+                <i data-feather="settings"></i>
+                <span>サービス設定</span>
+              </a>
+              <a class="active" href="./setting-mail.html">
+                <i data-feather="mail"></i>
+                <span>メール編集</span>
+              </a>
+            </div>
+            <ul class="nav nav-pills mb-3 mt-4" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link font-weight-bold active" id="pills-takeout-tab" data-toggle="pill" href="#pills-takeout" role="tab" aria-controls="pills-takeout" aria-selected="true">お持ち帰り</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link font-weight-bold" id="pills-delivery-tab" data-toggle="pill" href="#pills-delivery" role="tab" aria-controls="pills-delivery" aria-selected="false">デリバリー</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link font-weight-bold" id="pills-ec-tab" data-toggle="pill" href="#pills-ec" role="tab" aria-controls="pills-ec" aria-selected="false">お取り寄せ</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <!-- takeout -->
+              <div class="tab-pane fade show active bg-white p-3 rounded" id="pills-takeout" role="tabpanel" aria-labelledby="pills-takeout-tab">
+                <form action="" class="border-bottom pb-4">
+                  <h3 class="font-weight-bold h5 mb-3">テストメール送信</h3>
+                  <div class="form-group border-0">
+                    <label for="">送信メールアドレス</label>
+                    <input type="email" name="" class="form-control border" id="" placeholder="">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-dark rounded-pill">テストメールを送信する</button>
+                  </div>
+                </form>
+                <form action="" class="py-4">
+                  <h3 class="font-weight-bold h5 mb-3">メール内容の編集</h3>
+                  <div class="form-group">
+                    <label for="">以下の置換文字をご利用いただけます。</label>
+                    <div class="d-flex justify-content-start align-items-center flex-wrap">
+                      <div class="mr-2 mb-2">店舗名<span class="text-primary ml-1">%%shop_name%%</span></div>
+                      <div class="mr-2 mb-2">店舗電話番号<span class="text-primary ml-1">%%shop_tel%%</span></div>
+                      <div class="mr-2 mb-2">店舗メールアドレス<span class="text-primary ml-1">%%shop_email%%</span></div>
+                      <div class="mr-2 mb-2">お客様名<span class="text-primary ml-1">%%user_name%%</span></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">件名</label>
+                    <input type="text" name="" class="form-control border" id="" value="【%%shop_name%%】ご注文内容の確認">
+                  </div>
+                  <div class="form-group">
+                    <label for="">ヘッダー</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">%%user%% 様
+%%shop_name%%です。
+
+この度はテイクアウトをご利用頂きまして誠にありがとうございます。
+以下の内容で、商品の注文を承りました。
+本メールと行き違いで既にお受け取りいただいておりました場合はご容赦ください。</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">本文(見本)</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8" readonly>＜注文内容＞
+
+～ お受け取り日時 ～
+2020-08-19（水）18:45頃
+
+[注文者様名] 
+[注文者様名（フリガナ）] 
+[お電話番号] 
+[お支払方法] 
+[領収書] 
+[お受取方法] 
+[ご注文店舗] 
+[お店へのご要望]
+
+〜注文商品が入ります。〜
+
+——————————————
+[小計(税抜)]：　円
+——————————————
+[消費税]：　円
+——————————————
+[お気持ちオプション]：　円
+——————————————
+[商品代金合計]：　円</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">フッター</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">★ご注意下さい★
+■ キャンセルは前日19時までとなります。お受け取り当日のキャンセルにつきましてはお承りできかねます。
+■ 商品のキャンセルや変更などにつきましては、下記にお問い合わせください。
+　　TEL：%%shop_tel%%
+■ 受注後に品切れのご連絡をさせていただく場合がございます。ご了承ください。
+■ クレジットカード決済をご利用の場合、お客様が受け取りにいらっしゃらない場合でも、代金はかかりますのでご了承ください。
+■ 本請求につきまして「TakeEats」からのご請求になりますので予めご了承ください。
+
+※当メールは送信専用メールアドレスから配信されています。</textarea>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-success text-white px-5">保存する</button>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade bg-white p-3" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
+                <form action="" class="border-bottom pb-4">
+                  <h3 class="font-weight-bold h5 mb-3">テストメール送信</h3>
+                  <div class="form-group border-0">
+                    <label for="">送信メールアドレス</label>
+                    <input type="email" name="" class="form-control border" id="" placeholder="">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-dark rounded-pill">テストメールを送信する</button>
+                  </div>
+                </form>
+                <form action="" class="py-4">
+                  <h3 class="font-weight-bold h5 mb-3">メール内容の編集</h3>
+                  <div class="form-group">
+                    <label for="">以下の置換文字をご利用いただけます。</label>
+                    <div class="d-flex justify-content-start align-items-center flex-wrap">
+                      <div class="mr-2 mb-2">店舗名<span class="text-primary ml-1">%%shop_name%%</span></div>
+                      <div class="mr-2 mb-2">店舗電話番号<span class="text-primary ml-1">%%shop_tel%%</span></div>
+                      <div class="mr-2 mb-2">店舗メールアドレス<span class="text-primary ml-1">%%shop_email%%</span></div>
+                      <div class="mr-2 mb-2">お客様名<span class="text-primary ml-1">%%user_name%%</span></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">件名</label>
+                    <input type="text" name="" class="form-control border" id="" value="【%%shop_name%%】ご注文内容の確認">
+                  </div>
+                  <div class="form-group">
+                    <label for="">ヘッダー</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">%%user%% 様
+%%shop_name%%です。
+
+この度はデリバリーをご利用頂きまして誠にありがとうございます。
+以下の内容で、商品の注文を承りました。
+本メールと行き違いで既にお受け取りいただいておりました場合はご容赦ください。</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">本文(見本)</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8" readonly>＜注文内容＞
+
+～ お受け取り日時 ～
+2020-08-19（水）18:45頃
+
+[注文者様名] 
+[注文者様名（フリガナ）] 
+[お電話番号] 
+[お支払方法] 
+[領収書] 
+[お受取方法] 
+[ご注文店舗] 
+[お店へのご要望]
+
+〜注文商品が入ります。〜
+
+——————————————
+[小計(税抜)]：　円
+——————————————
+[消費税]：　円
+——————————————
+[お気持ちオプション]：　円
+——————————————
+[商品代金合計]：　円</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">フッター</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">★ご注意下さい★
+■ キャンセルは前日19時までとなります。お受け取り当日のキャンセルにつきましてはお承りできかねます。
+■ 商品のキャンセルや変更などにつきましては、下記にお問い合わせください。
+　　TEL：%%shop_tel%%
+■ 受注後に品切れのご連絡をさせていただく場合がございます。ご了承ください。
+■ クレジットカード決済をご利用の場合、お客様が受け取りにいらっしゃらない場合でも、代金はかかりますのでご了承ください。
+■ 本請求につきまして「TakeEats」からのご請求になりますので予めご了承ください。
+
+※当メールは送信専用メールアドレスから配信されています。</textarea>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-success text-white px-5">保存する</button>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade bg-white p-3" id="pills-ec" role="tabpanel" aria-labelledby="pills-ec-tab">
+                <form action="" class="border-bottom pb-4">
+                  <h3 class="font-weight-bold h5 mb-3">テストメール送信</h3>
+                  <div class="form-group border-0">
+                    <label for="">送信メールアドレス</label>
+                    <input type="email" name="" class="form-control border" id="" placeholder="">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-dark rounded-pill">テストメールを送信する</button>
+                  </div>
+                </form>
+                <form action="" class="py-4">
+                  <h3 class="font-weight-bold h5 mb-3">メール内容の編集</h3>
+                  <div class="form-group">
+                    <label for="">以下の置換文字をご利用いただけます。</label>
+                    <div class="d-flex justify-content-start align-items-center flex-wrap">
+                      <div class="mr-2 mb-2">店舗名<span class="text-primary ml-1">%%shop_name%%</span></div>
+                      <div class="mr-2 mb-2">店舗電話番号<span class="text-primary ml-1">%%shop_tel%%</span></div>
+                      <div class="mr-2 mb-2">店舗メールアドレス<span class="text-primary ml-1">%%shop_email%%</span></div>
+                      <div class="mr-2 mb-2">お客様名<span class="text-primary ml-1">%%user_name%%</span></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">件名</label>
+                    <input type="text" name="" class="form-control border" id="" value="【%%shop_name%%】ご注文内容の確認">
+                  </div>
+                  <div class="form-group">
+                    <label for="">ヘッダー</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">%%user%% 様
+%%shop_name%%です。
+
+この度はお取り寄せをご利用頂きまして誠にありがとうございます。
+以下の内容で、商品の注文を承りました。
+本メールと行き違いで既にお受け取りいただいておりました場合はご容赦ください。</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">本文(見本)</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8" readonly>＜注文内容＞
+
+～ 配達日時 ～
+2020-08-19（水）午前中
+
+[注文者様名] 
+[注文者様名（フリガナ）] 
+[お電話番号] 
+[お支払方法] 
+[領収書] 
+[お受取方法] 
+[ご注文店舗] 
+[お店へのご要望]
+
+〜注文商品が入ります。〜
+
+——————————————
+[小計(税抜)]：　円
+——————————————
+[消費税]：　円
+——————————————
+[お気持ちオプション]：　円
+——————————————
+[商品代金合計]：　円</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">フッター</label>
+                    <textarea name="" class="form-control border" id="" cols="30" rows="8">★ご注意下さい★
+■ キャンセルは前日19時までとなります。お受け取り当日のキャンセルにつきましてはお承りできかねます。
+■ 商品のキャンセルや変更などにつきましては、下記にお問い合わせください。
+　　TEL：%%shop_tel%%
+■ 受注後に品切れのご連絡をさせていただく場合がございます。ご了承ください。
+■ クレジットカード決済をご利用の場合、お客様が受け取りにいらっしゃらない場合でも、代金はかかりますのでご了承ください。
+■ 本請求につきまして「TakeEats」からのご請求になりますので予めご了承ください。
+
+※当メールは送信専用メールアドレスから配信されています。</textarea>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-success text-white px-5">保存する</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- .wrap -->
+          <div class="socket">©2020 TakeEats</div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    <div class="orverray"></div>
+  </body>
+</html>
