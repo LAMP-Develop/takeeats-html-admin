@@ -95,10 +95,17 @@
         <main id="main" role="main" class="col-md-10 ml-sm-auto px-md-4 bg-light">
           <div class="wrap">
             <h2 class="page-ttl">注文管理</h2>
-            <form class="form-inline border-top border-bottom py-3">
-              <input type="search" class="form-control w-50 mr-2" id="" placeholder="キーワードで検索" />
-              <button type="button" class="btn btn-primary">
-                <i data-feather="search"></i>
+            <form class="form-inline border-top border-bottom py-3" action="" method="POST">
+              <select class="custom-select border-0" name="period">
+                <option value="all">全期間</option>
+                <option value="today">今日</option>
+                <option value="lastday">昨日</option>
+                <option value="thismonth">今月</option>
+                <option value="lastmonth">先月</option>
+              </select>
+              <input type="search" class="form-control mx-lg-3 my-lg-0 my-2" name="ketwords" placeholder="キーワードで検索" value="">
+              <button type="submit" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <span>絞り込み</span>
               </button>
             </form>
@@ -172,5 +179,12 @@
     </div>
     <!-- .container-fluid -->
     <div class="orverray"></div>
+
+    <script>
+      const timer = 30000;
+      window.addEventListener('load', function() {
+        setInterval('location.reload()', timer);
+      });
+    </script>
   </body>
 </html>

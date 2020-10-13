@@ -12,6 +12,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import bootstrapPlugin from "@fullcalendar/bootstrap";
 
+require("jquery-ui/ui/widgets/sortable");
+
 const feather = require("feather-icons");
 
 $(function () {
@@ -52,6 +54,11 @@ $(function () {
         });
     }
   });
+
+  $(".js-sort-table-menu, .js-sort-table-cat").sortable({
+    forceHelperSize: true,
+  });
+
   // 店舗設定
   $('input[name="saleshop-flag"]').on("change", function () {
     if ($(this).val() == 1 || $(this).val() == 2) {
