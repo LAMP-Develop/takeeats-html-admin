@@ -69,6 +69,24 @@
     &-input {
       display: none;
     }
+    &-preview {
+      &:hover {
+        position: relative;
+        &::after {
+          z-index: 1;
+          display: block;
+          line-height: 1;
+          cursor: pointer;
+          position: absolute;
+          top: 5px;
+          left: 10px;
+          content: "×";
+          color: #888888;
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
+    }
   }
   &-date {
     display: none;
