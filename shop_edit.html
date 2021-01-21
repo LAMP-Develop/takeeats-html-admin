@@ -98,7 +98,7 @@
         <!-- #sidebarMenu -->
         <main id="main" role="main" class="col-lg-10 ml-sm-auto px-lg-4 bg-light">
           <div class="wrap">
-            <h2 class="page-ttl">店舗の追加・編集</h2>
+            <h2 class="page-ttl">店舗の編集</h2>
             <form action="" method="post">
               <h3 class="font-weight-bold h5 mb-3">1. 基本情報</h3>
               <div class="form-group">
@@ -106,18 +106,32 @@
                   店舗名
                   <span class="badge badge-warning text-white ml-1">必須</span>
                 </label>
-                <input type="text" class="form-control" id="" />
+                <input type="text" class="form-control" value="本店"　id="" />
               </div>
               <div class="form-group">
                 <label for="">
                   電話番号
                   <span class="badge badge-warning text-white ml-1">必須</span>
                 </label>
-                <input type="tel" class="form-control" id="" />
+                <input type="tel" class="form-control" value="000-0000-0000" id="" />
+              </div>
+              <div class="form-group">
+                <label for="noti_tel">電話番号（注文通知用）</label>
+                <input type="tel" class="form-control" id="noti_tel" name="noti_tel" value="" placeholder="ハイフンなし半角数字のみ">
+                <div class="form-inline my-2">
+                  <input type="time" class="form-control form-control-sm w-auto" name="noti_start_time" min="00:00" max="23:59" value="">
+                  <span class="mx-2">〜</span>
+                  <input type="time" class="form-control form-control-sm w-auto" name="noti_end_time" min="00:00" max="23:59" value="">
+                </div>
+                <small class="d-block form-text text-muted">※電話通知を受ける時間帯を記入ください。上記の時間以外では電話での通知が来なくなります。</small>
+              </div>
+              <div class="form-group">
+                <label for="fax">FAX（通知用）</label>
+                <input type="tel" class="form-control" id="fax" name="fax" value="">
               </div>
               <div class="form-group">
                 <label for="">
-                  メールアドレス
+                  メールアドレス(通知用)
                   <span class="badge badge-warning text-white ml-1">必須</span>
                 </label>
                 <input type="email" class="form-control" id="" />
@@ -188,1119 +202,154 @@
               </div>
               <h3 class="font-weight-bold h5 mb-3 mt-4">5. 営業日時</h3>
               <div class="collapse-wrap">
-                <div class="collapse-ttl" data-toggle="collapse" href="#settingTakeout">お持ち帰り</div>
-                <div class="collapse" id="settingTakeout">
+                <div class="collapse-ttl" data-toggle="collapse" href="#settingTakeout" aria-expanded="true">お持ち帰り</div>
+                <div class="collapse show" id="settingTakeout" style="">
                   <div class="form-group">
                     <label for="takeout_preparation">
-                      ご注文受け付け時間
+                      受け渡しまでの時間
                       <span class="badge badge-warning text-white ml-1">必須</span>
                     </label>
                     <div class="input-group w-50">
-                      <input type="number" min="0" class="form-control" id="takeout_preparation" name="takeout_preparation" value="30" required />
+                      <input type="number" min="0" class="form-control" id="takeout_preparation" name="takeout_preparation" value="30" required="">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">分前</div>
+                        <div class="input-group-text">分</div>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_sun" value="1" id="takeout_sun" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_sun" value="1" id="takeout_sun" checked="">
                       <label class="form-check-label text-body mr-3" for="">日</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_sun" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_sun" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_sun" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_sun" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_mon" value="1" id="takeout_mon" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_mon" value="1" id="takeout_mon" checked="">
                       <label class="form-check-label text-body mr-3" for="">月</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_mon" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_mon" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_mon" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_mon" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_mon" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_mon" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_mon" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_mon" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_tue" value="1" id="takeout_tue" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_tue" value="1" id="takeout_tue" checked="">
                       <label class="form-check-label text-body mr-3" for="">火</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_tue" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_tue" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_tue" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_tue" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_tue" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_tue" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_tue" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_tue" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_wed" value="1" id="takeout_wed" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_wed" value="1" id="takeout_wed" checked="">
                       <label class="form-check-label text-body mr-3" for="">水</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_wed" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_wed" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_wed" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_wed" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_wed" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_wed" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_wed" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_wed" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_thu" value="1" id="takeout_thu" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_thu" value="1" id="takeout_thu" checked="">
                       <label class="form-check-label text-body mr-3" for="">木</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_thu" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_thu" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_thu" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_thu" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_thu" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_thu" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_thu" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_thu" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_fri" value="1" id="takeout_fri" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_fri" value="1" id="takeout_fri" checked="">
                       <label class="form-check-label text-body mr-3" for="">金</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_fri" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_fri" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_fri" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_fri" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_fri" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_fri" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_fri" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_fri" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                    <div class="form-check flex-wrap">
-                      <input class="form-check-input" type="checkbox" name="takeout_sat" value="1" id="takeout_sat" checked />
+                            <div class="form-check flex-wrap">
+
+                      <input class="form-check-input" type="checkbox" name="takeout_sat" value="1" id="takeout_sat" checked="">
                       <label class="form-check-label text-body mr-3" for="">土</label>
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_start_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="mr-2 text-muted">ランチ</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_start_sat" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_start_hours_sat" value="00:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_lunch_end_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_lunch_end_sat" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_lunch_end_hours_sat" value="01:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
-                      <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_start_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <span class="ml-md-3 mr-2 text-muted">ディナー</span>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_start_sat" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_start_sat" value="17:00">
                       <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19" selected>19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="takeout_dinner_end_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="takeout_dinner_end_sat" class="form-control form-control-sm w-auto py-0 px-1 border" id="takeout_dinner_end_sat" value="23:45">
+                      <div class="d-md-none w-100 mt-2"></div>
                     </div>
-                  </div>
+                          </div>
                 </div>
               </div>
               <!-- .collapse-wrap -->
-              <div class="mt-4">
-                <button type="button" class="btn btn-success text-white">追加する</button>
+              <div class="mt-4 d-flex">
+                <button type="submit" class="btn btn-success text-white px-5">確認する</button>
+                <button type="submit" class="btn btn-danger text-white ml-auto">削除する</button>
               </div>
             </form>
           </div>

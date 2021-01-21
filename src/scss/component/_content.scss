@@ -289,8 +289,7 @@
     &-price {
       display: flex;
       justify-content: space-between;
-      padding: $font-size-base;
-      font-weight: bold;
+      padding: .6rem;
       line-height: 1;
       .price {
         font-weight: bold;

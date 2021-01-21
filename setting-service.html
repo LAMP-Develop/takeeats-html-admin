@@ -109,10 +109,6 @@
                 <i data-feather="settings"></i>
                 <span>サービス設定</span>
               </a>
-              <a class="" href="./setting-mail.html">
-                <i data-feather="mail"></i>
-                <span>メール編集</span>
-              </a>
             </div>
 
             <div class="collapse-wrap mt-4">
@@ -152,7 +148,7 @@
 
                   <div class="form-group">
                     <label for="delivery_preparation">
-                      ご注文受け付け時間
+                      受け渡しまでの時間
                       <span class="badge badge-warning text-white ml-1">必須</span>
                     </label>
                     <div class="input-group w-50">
@@ -173,155 +169,16 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
+
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_sun">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_sun">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_mon" value="1" id="delivery_mon" checked />
@@ -329,155 +186,15 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_mon">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_mon">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_tue" value="1" id="delivery_tue" checked />
@@ -485,155 +202,15 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_tue">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_tue">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_wed" value="1" id="delivery_wed" checked />
@@ -641,155 +218,15 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_wed">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_wed">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_thu" value="1" id="delivery_thu" checked />
@@ -797,155 +234,15 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_thu">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_thu">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_fri" value="1" id="delivery_fri" checked />
@@ -953,155 +250,15 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_fri">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_fri">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                     <div class="form-check flex-wrap">
                       <input class="form-check-input" type="checkbox" name="delivery_sat" value="1" id="delivery_sat" checked />
@@ -1109,163 +266,24 @@
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="mr-2">ランチ</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11" selected>11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_start_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14" selected>14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_lunch_end_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                       <div class="d-md-none w-100 mt-2"></div>
 
                       <span class="ml-md-3 mr-2">ディナー</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15" selected>15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_start_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_start_sun" value="10:00">
                       <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_start_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00" selected>00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                      </select>
-                      <span class="mx-1">〜</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_hours_sat">
-                        <option value="">--</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18" selected>18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                      </select>
-                      <span class="mx-1">：</span>
-                      <select class="form-control form-control-sm w-auto py-0 px-1 border" name="delivery_dinner_end_seconds_sat">
-                        <option value="">--</option>
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30" selected>30</option>
-                        <option value="45">45</option>
-                      </select>
+                      <input type="time" min="00:00" max="23:45" step="900" name="delivery_lunch_end_sun" class="form-control form-control-sm w-auto py-0 px-1 border" id="delivery_lunch_end_sun" value="13:00">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="delivery_area">
-                      デリバリーエリア詳細
+                      デリバリーに関する注意事項など
                       <span class="badge badge-warning text-white ml-1">必須</span>
+                      <small class="d-block form-text text-muted mb-2">お客様情報入力画面に表示されます。</small>
                     </label>
-                    <textarea class="form-control" id="delivery_area" name="delivery_area" cols="30" rows="5">京都市内のみ</textarea>
+                    <textarea class="form-control" id="delivery_area" name="delivery_area" cols="30" rows="5">京都市内のみです。</textarea>
                   </div>
 
                   <div class="mt-4 text-center">
@@ -1283,7 +301,7 @@
                   <input type="hidden" name="_token" value="Mj0mpqsZGYGFj9SFp1Qe0dKEwmSVGnVRQeXCE2pi" />
                   <div class="form-group">
                     <label for="ec_min_days">
-                      最短配送目安
+                      最短お届け可能日
                       <span class="badge badge-warning text-white ml-1">必須</span>
                     </label>
                     <div class="input-group w-50">
@@ -1295,7 +313,7 @@
                   </div>
                   <div class="form-group">
                     <label for="ec_delivery_time">
-                      配達時間
+                      配達可能時間帯
                       <span class="badge badge-warning text-white ml-1">必須</span>
                     </label>
                     <textarea class="form-control" id="ec_delivery_time" name="ec_delivery_time" cols="30" rows="5" placeholder="午前中&#13;&#10;12:00-15:00" required></textarea>
